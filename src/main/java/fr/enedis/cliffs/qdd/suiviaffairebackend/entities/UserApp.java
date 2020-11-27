@@ -1,12 +1,14 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
+import fr.enedis.cliffs.qdd.suiviaffairebackend.security.BCryptEncoderConfig;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class User {
+public class UserApp {
 
     @Id
     @GeneratedValue
@@ -21,13 +23,13 @@ public class User {
     @NotNull
     private String email;
 
-    public User() {
+    public UserApp() {
     }
 
-    public User(Long id, String nni, String password, String email) {
+    public UserApp(Long id, String nni, String password, String email) {
         Id = id;
         Nni = nni;
-        this.password = password;
+        this.password = BCryptEncoderConfig.passwordencoder().encode(password);
         this.email = email;
     }
 
@@ -52,7 +54,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = BCryptEncoderConfig.passwordencoder().encode(password);
     }
 
     public String getEmail() {

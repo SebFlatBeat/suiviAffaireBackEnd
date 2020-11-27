@@ -13,7 +13,7 @@ public class Blocage {
 
     @OneToOne
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
-    private User user;
+    private UserApp userApp;
 
     @OneToOne
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
@@ -33,9 +33,9 @@ public class Blocage {
     public Blocage() {
     }
 
-    public Blocage(Long id, User user, SGE sge, SGO sgo, GEC gec, BlocageSource blocageSource) {
+    public Blocage(Long id, UserApp userApp, SGE sge, SGO sgo, GEC gec, BlocageSource blocageSource) {
         Id = id;
-        this.user = user;
+        this.userApp = userApp;
         this.sge = sge;
         this.sgo = sgo;
         this.gec = gec;
@@ -50,12 +50,12 @@ public class Blocage {
         Id = id;
     }
 
-    public User getUser() {
-        return user;
+    public UserApp getUserApp() {
+        return userApp;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserApp(UserApp userApp) {
+        this.userApp = userApp;
     }
 
     public SGE getSge() {
