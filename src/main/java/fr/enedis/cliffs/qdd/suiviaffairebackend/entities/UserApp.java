@@ -1,6 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
-import fr.enedis.cliffs.qdd.suiviaffairebackend.security.BCryptEncoderConfig;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.configuration.BCryptEncoderConfig;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,7 +15,7 @@ public class UserApp {
     private Long Id;
 
     @NotNull //Ajouter des contraintes de validations
-    private String Nni;
+    private String username;
 
     @NotNull //Rendre le mot de passe crypté
     private String password;
@@ -26,10 +26,10 @@ public class UserApp {
     public UserApp() {
     }
 
-    public UserApp(Long id, String nni, String password, String email) {
+    public UserApp(Long id, String username, String password, String email) {
         Id = id;
-        Nni = nni;
-        this.password = BCryptEncoderConfig.passwordencoder().encode(password);
+        this.username = username;
+        this.password = password;
         this.email = email;
     }
 
@@ -41,12 +41,12 @@ public class UserApp {
         Id = id;
     }
 
-    public String getNni() {
-        return Nni;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNni(String nni) {
-        Nni = nni;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
