@@ -1,4 +1,4 @@
-package fr.enedis.cliffs.qdd.suiviaffairebackend.security;
+package fr.enedis.cliffs.qdd.suiviaffairebackend.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
