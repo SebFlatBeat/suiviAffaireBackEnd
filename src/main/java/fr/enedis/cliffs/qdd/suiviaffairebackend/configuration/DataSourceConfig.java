@@ -1,6 +1,5 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.configuration;
 
-import fr.enedis.cliffs.qdd.suiviaffairebackend.security.BCryptEncoderConfig;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
