@@ -21,15 +21,7 @@ public class Data {
     public void parsing(){
         try {
             reader.readFileSGE(inputSGEFile);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        try {
             reader.readFileGEC(inputGECFile);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        try {
             reader.readFileSGO(inputSGOFile);
         }catch (Exception e){
             e.printStackTrace();
