@@ -14,7 +14,7 @@ public class SuiviAffaireController {
     @Autowired
     AllDataService allDataService;
 
-    @GetMapping("synthese")
+    @GetMapping("analyse")
     public AllDataListDto getAllData(){
         return allDataService.findAllData();
     }
