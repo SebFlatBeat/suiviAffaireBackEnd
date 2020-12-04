@@ -5,6 +5,8 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.GEC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GECService {
 
@@ -14,4 +16,6 @@ public class GECService {
     public void saveGEC(GEC gec){
         gecDao.save(gec);
     }
+
+    public List<GEC> findAll() { return gecDao.findAll(); }
 }

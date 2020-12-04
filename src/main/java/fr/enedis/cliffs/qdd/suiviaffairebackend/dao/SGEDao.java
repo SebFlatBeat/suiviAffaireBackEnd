@@ -9,4 +9,6 @@ public interface SGEDao extends JpaRepository<SGE, Long> {
 
     SGE save(SGE sge);
 
+
+    List<SGE>findAll();
 }
