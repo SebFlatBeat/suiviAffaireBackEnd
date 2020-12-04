@@ -1,4 +1,4 @@
-package fr.enedis.cliffs.qdd.suiviaffairebackend.beans;
+package fr.enedis.cliffs.qdd.suiviaffairebackend.dto;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.GEC;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
@@ -6,7 +6,7 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGO;
 
 import java.util.List;
 
-public class AllDataListBean {
+public class AllDataListDto {
     private List <SGE> sge;
     private List <SGO> sgo;
     private List <GEC> gec;
