@@ -25,14 +25,65 @@ public class Reader {
     @Autowired
     SGOService sgoService;
 
-
-    public void readFileSGE(String csvFile){
+    public void readFileGEC(String csvFile) {
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String skipHeader;
             String line;
             skipHeader = scanner.nextLine();
-            while (scanner.hasNextLine()){
+            while (scanner.hasNextLine()) {
+                GEC gec = new GEC();
+                line = scanner.nextLine();
+                String[] results = line.split(";", -5);
+                Long num1 = Long.parseLong(results[0]);
+                if (!results[3].isEmpty()) {
+                    Long num2 = Long.parseLong(results[3]);
+                    gec.setNumeroDt(num2);
+                }
+                gec.setIdc(num1);
+                gec.setEtatContractuel(results[1]);
+                gec.setModeReleve(results[2]);
+                gec.setStatutDt(results[4]);
+                gec.setPrestationRealise(results[5]);
+                gec.setRealisation(results[6]);
+                gecService.saveGEC(gec);
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFileSGO(String csvFile) {
+        try {
+            Scanner scanner = new Scanner(new FileReader(csvFile));
+            String skipHeader;
+            String line;
+            skipHeader = scanner.nextLine();
+            while (scanner.hasNextLine()) {
+                SGO sgo = new SGO();
+                line = scanner.nextLine();
+                String[] results = line.split(";", -1);
+                sgo.setNumeroAffaire(results[0]);
+                sgo.setEtatAffaire(results[1]);
+                sgo.setIntervention(results[2]);
+                sgoService.saveSGO(sgo);
+            }
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void readFileSGE(String csvFile) {
+        try {
+            Scanner scanner = new Scanner(new FileReader(csvFile));
+            String skipHeader;
+            String line;
+            skipHeader = scanner.nextLine();
+            List<GEC> gecList = gecService.findAll();
+            List<SGO> sgoList = sgoService.findAll();
+            while (scanner.hasNextLine()) {
                 SGE sge = new SGE();
                 line = scanner.nextLine();
                 String[] results = line.split(";");
@@ -45,70 +96,20 @@ public class Reader {
                 sge.setPrestation(results[4]);
                 sge.setContratDemande(results[5]);
                 sge.setContratInitial(results[6]);
+                for (GEC g : gecList) {
+                    if (g.getIdc().equals(sge.getIdc())) {
+                        sge.setGec(g);
+                    }
+                }
+                for (SGO s : sgoList) {
+                    if (s.getNumeroAffaire().equals(sge.getNumeroAffaire())) {
+                        sge.setSgo(s);
+                    }
+                }
                 sgeService.saveSGE(sge);
             }
             scanner.close();
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
-    }
-
-    public void readFileGEC(String csvFile){
-        try {
-            Scanner scanner = new Scanner(new FileReader(csvFile));
-            String skipHeader;
-            String line;
-            skipHeader = scanner.nextLine();
-            List<SGE> sgeList = sgeService.findAll();
-            while (scanner.hasNextLine()){
-                GEC gec = new GEC();
-                line = scanner.nextLine();
-                String[] results = line.split(";",-5);
-                Long num1 = Long.parseLong(results[0]);
-                if (!results[3].isEmpty()){
-                    Long num2 = Long.parseLong(results[3]);
-                    gec.setNumeroDt(num2);}
-                gec.setIdc(num1);
-                gec.setEtatContractuel(results[1]);
-                gec.setModeReleve(results[2]);
-                gec.setStatutDt(results[4]);
-                gec.setPrestationRealise(results[5]);
-                gec.setRealisation(results[6]);
-                for(SGE s : sgeList){
-                    if(s.getIdc().equals(gec.getIdc())){
-                        gec.setSge(s);
-                    }
-                }
-                gecService.saveGEC(gec);
-            }
-            scanner.close();
-        }catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
-    }
-    public void readFileSGO(String csvFile){
-        try {
-            Scanner scanner = new Scanner(new FileReader(csvFile));
-            String skipHeader;
-            String line;
-            skipHeader = scanner.nextLine();
-            List<SGE> sgeList = sgeService.findAll();
-            while (scanner.hasNextLine()){
-                SGO sgo = new SGO();
-                line = scanner.nextLine();
-                String[] results = line.split(";",-1);
-                sgo.setNumeroAffaire(results[0]);
-                sgo.setEtatAffaire(results[1]);
-                sgo.setIntervention(results[2]);
-                for(SGE s : sgeList){
-                    if(s.getNumeroAffaire().equals(sgo.getNumeroAffaire())){
-                        sgo.setSge(s);
-                    }
-                }
-                sgoService.saveSGO(sgo);
-            }
-            scanner.close();
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }

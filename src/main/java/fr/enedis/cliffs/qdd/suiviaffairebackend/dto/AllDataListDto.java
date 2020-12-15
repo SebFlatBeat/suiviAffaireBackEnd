@@ -6,7 +6,7 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGO;
 
 import java.util.List;
 
-public class AllDataListDto {
+public class AllDataListDto  {
     private List <SGE> sge;
     private List <SGO> sgo;
     private List <GEC> gec;

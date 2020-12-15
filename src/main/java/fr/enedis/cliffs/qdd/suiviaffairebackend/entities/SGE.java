@@ -1,8 +1,12 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -33,6 +37,14 @@ public class SGE {
     @NotNull
     private String contratInitial;
 
+    @OneToOne
+    @Cascade(CascadeType.DETACH)
+    private SGO sgo;
+
+    @OneToOne
+    @Cascade(CascadeType.DETACH)
+    private GEC gec;
+
     /**
      *Instantiate a new SGE
      */
@@ -51,7 +63,7 @@ public class SGE {
      * @param contratInitial
      */
     public SGE(Long id, String numeroAffaire, Long prm, Long idc, String portefeuille,
-               String prestation, String contratDemande, String contratInitial) {
+               String prestation, String contratDemande, String contratInitial, SGO sgo, GEC gec) {
         Id = id;
         this.numeroAffaire = numeroAffaire;
         this.prm = prm;
@@ -60,6 +72,8 @@ public class SGE {
         this.prestation = prestation;
         this.contratDemande = contratDemande;
         this.contratInitial = contratInitial;
+        this.sgo = sgo;
+        this.gec = gec;
     }
 
     public Long getId() {
@@ -124,5 +138,21 @@ public class SGE {
 
     public void setContratInitial(String contratInitial) {
         this.contratInitial = contratInitial;
+    }
+
+    public SGO getSgo() {
+        return sgo;
+    }
+
+    public void setSgo(SGO sgo) {
+        this.sgo = sgo;
+    }
+
+    public GEC getGec() {
+        return gec;
+    }
+
+    public void setGec(GEC gec) {
+        this.gec = gec;
     }
 }

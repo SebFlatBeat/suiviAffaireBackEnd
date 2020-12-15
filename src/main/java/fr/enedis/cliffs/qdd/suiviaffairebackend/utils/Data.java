@@ -20,9 +20,9 @@ public class Data {
 
     public void parsing(){
         try {
-            reader.readFileSGE(inputSGEFile);
             reader.readFileGEC(inputGECFile);
             reader.readFileSGO(inputSGOFile);
+            reader.readFileSGE(inputSGEFile);
         }catch (Exception e){
             e.printStackTrace();
         }

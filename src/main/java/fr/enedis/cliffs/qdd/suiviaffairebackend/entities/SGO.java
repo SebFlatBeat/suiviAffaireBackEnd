@@ -1,12 +1,8 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -24,19 +20,14 @@ public class SGO {
 
     private String intervention;
 
-    @OneToOne
-    @Cascade(CascadeType.DETACH)
-    private SGE sge;
-
     public SGO() {
     }
 
-    public SGO(Long id, String numeroAffaire, String etatAffaire, String intervention, SGE sge) {
+    public SGO(Long id, String numeroAffaire, String etatAffaire, String intervention) {
         Id = id;
         this.numeroAffaire = numeroAffaire;
         this.etatAffaire = etatAffaire;
         this.intervention = intervention;
-        this.sge = sge;
     }
 
     public Long getId() {
@@ -72,11 +63,4 @@ public class SGO {
         this.intervention = intervention;
     }
 
-    public SGE getSge() {
-        return sge;
-    }
-
-    public void setSge(SGE sge) {
-        this.sge = sge;
-    }
 }

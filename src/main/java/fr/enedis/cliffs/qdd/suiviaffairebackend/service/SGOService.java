@@ -13,9 +13,11 @@ public class SGOService {
     @Autowired
     SGODao sgoDao;
 
-    public void saveSGO(SGO sgo){
+    public void saveSGO(SGO sgo) {
         sgoDao.save(sgo);
     }
 
-    public List<SGO> findAll() { return sgoDao.findAll(); }
+    public List<SGO> findAll() {
+        return sgoDao.findAll();
+    }
 }
