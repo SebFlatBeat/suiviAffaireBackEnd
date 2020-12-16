@@ -13,9 +13,11 @@ public class GECService {
     @Autowired
     GECDao gecDao;
 
-    public void saveGEC(GEC gec){
+    public void saveGEC(GEC gec) {
         gecDao.save(gec);
     }
 
-    public List<GEC> findAll() { return gecDao.findAll(); }
+    public List<GEC> findAll() {
+        return gecDao.findAll();
+    }
 }

@@ -1,12 +1,8 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -32,15 +28,11 @@ public class GEC {
 
     private String realisation;
 
-    @OneToOne
-    @Cascade(CascadeType.DETACH)
-    private SGE sge;
-
     public GEC() {
     }
 
     public GEC(Long id, Long idc, String etatContractuel, String modeReleve, Long numeroDt, String statutDt,
-               String prestationRealise, String realisation, SGE sge) {
+               String prestationRealise, String realisation) {
         Id = id;
         this.idc = idc;
         this.etatContractuel = etatContractuel;
@@ -49,7 +41,6 @@ public class GEC {
         this.statutDt = statutDt;
         this.prestationRealise = prestationRealise;
         this.realisation = realisation;
-        this.sge = sge;
     }
 
     public Long getId() {
@@ -114,13 +105,5 @@ public class GEC {
 
     public void setRealisation(String realisation) {
         this.realisation = realisation;
-    }
-
-    public SGE getSge() {
-        return sge;
-    }
-
-    public void setSge(SGE sge) {
-        this.sge = sge;
     }
 }
