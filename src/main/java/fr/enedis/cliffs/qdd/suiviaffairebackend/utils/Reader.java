@@ -1,8 +1,7 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.utils;
 
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.GEC;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGO;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.*;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.GECService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGEService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGOService;
@@ -24,6 +23,9 @@ public class Reader {
 
     @Autowired
     SGOService sgoService;
+
+    @Autowired
+    BlocageService blocageService;
 
     public void readFileGEC(String csvFile) {
         try {
@@ -85,6 +87,7 @@ public class Reader {
             List<SGO> sgoList = sgoService.findAll();
             while (scanner.hasNextLine()) {
                 SGE sge = new SGE();
+                Blocage blocage = new Blocage();
                 line = scanner.nextLine();
                 String[] results = line.split(";");
                 Long num1 = Long.parseLong(results[1]);
@@ -107,6 +110,9 @@ public class Reader {
                     }
                 }
                 sgeService.saveSGE(sge);
+                blocage.setSge(sge);
+                blocage.setBlocageSource(BlocageSource.nonTraite);
+                blocageService.saveBlocage(blocage);
             }
             scanner.close();
         } catch (FileNotFoundException e) {
