@@ -47,6 +47,7 @@ public interface SGEDao extends JpaRepository<SGE, Long> {
                      @Param("prestationRealise") String prestationRealise,
                      @Param("realisation") String realisation,
                      @Param("etatAffaire") String etatAffaire,
-                     @Param("intervention") String intervention
+                     @Param("intervention") String intervention,
+                     Pageable pageable
     );
 }

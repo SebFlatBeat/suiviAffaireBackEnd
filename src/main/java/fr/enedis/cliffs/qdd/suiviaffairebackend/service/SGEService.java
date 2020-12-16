@@ -27,7 +27,7 @@ public class SGEService {
         return sgeDao.findAll(pageable);
     }
 
-    public Page<SGE> filter(FilterForm filterForm) {
+    public Page<SGE> filter(FilterForm filterForm, Pageable pageable) {
         return sgeDao.filter(filterForm.getNumeroAffaire(),
                 filterForm.getPrm(),
                 filterForm.getIdc(),
@@ -42,7 +42,8 @@ public class SGEService {
                 filterForm.getPrestationRealise(),
                 filterForm.getRealisation(),
                 filterForm.getEtatAffaire(),
-                filterForm.getIntervention()
+                filterForm.getIntervention(),
+                pageable
         );
     }
 }
