@@ -26,4 +26,8 @@ public class UserAppService implements UserDetailsService {
             throw new UsernameNotFoundException(String.format("Username[%s] not found"));
         }
     }
+
+    public Optional<UserApp> findById(Long userId) {
+        return userAppDao.findById(userId);
+    }
 }
