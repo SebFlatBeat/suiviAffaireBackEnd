@@ -3,6 +3,7 @@ package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import javax.validation.constraints.Null;
 
 @Entity
 public class Blocage {
@@ -13,19 +14,12 @@ public class Blocage {
 
     @OneToOne
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
+    @Null
     private UserApp userApp;
 
     @OneToOne
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
     private SGE sge;
-
-    @OneToOne
-    @Cascade(org.hibernate.annotations.CascadeType.DETACH)
-    private SGO sgo;
-
-    @OneToOne
-    @Cascade(org.hibernate.annotations.CascadeType.DETACH)
-    private GEC gec;
 
     @Enumerated(EnumType.STRING)
     private BlocageSource blocageSource;
@@ -33,12 +27,10 @@ public class Blocage {
     public Blocage() {
     }
 
-    public Blocage(Long id, UserApp userApp, SGE sge, SGO sgo, GEC gec, BlocageSource blocageSource) {
+    public Blocage(Long id, UserApp userApp, SGE sge, BlocageSource blocageSource) {
         Id = id;
         this.userApp = userApp;
         this.sge = sge;
-        this.sgo = sgo;
-        this.gec = gec;
         this.blocageSource = blocageSource;
     }
 
@@ -64,22 +56,6 @@ public class Blocage {
 
     public void setSge(SGE sge) {
         this.sge = sge;
-    }
-
-    public SGO getSgo() {
-        return sgo;
-    }
-
-    public void setSgo(SGO sgo) {
-        this.sgo = sgo;
-    }
-
-    public GEC getGec() {
-        return gec;
-    }
-
-    public void setGec(GEC gec) {
-        this.gec = gec;
     }
 
     public BlocageSource getBlocageSource() {
