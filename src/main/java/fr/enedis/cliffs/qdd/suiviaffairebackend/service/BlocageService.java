@@ -43,19 +43,21 @@ public class BlocageService {
         User userApp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         Optional<UserApp> user = userAppService.findByUsername(userApp.getUsername());
         if (blocage.isPresent()) {
+            switch (choix) {
+                case "SGE":
+                    blocage.get().setBlocageSource(BlocageSource.SGE);
+                    break;
+                case "SGO":
+                    blocage.get().setBlocageSource(BlocageSource.SGO);
+                    break;
+                case "GEC":
+                    blocage.get().setBlocageSource(BlocageSource.GEC);
+                    break;
+                case "nonTraite":
+                    blocage.get().setBlocageSource(BlocageSource.nonTraite);
+                    break;
+            }
             blocage.get().setUserApp(user.get());
-            if (choix.equals("SGE")) {
-                blocage.get().setBlocageSource(BlocageSource.SGE);
-            }
-            if (choix.equals("SGO")) {
-                blocage.get().setBlocageSource(BlocageSource.SGO);
-            }
-            if (choix.equals("GEC")) {
-                blocage.get().setBlocageSource(BlocageSource.GEC);
-            }
-            if (choix.equals("nonTraite")) {
-                blocage.get().setBlocageSource(BlocageSource.nonTraite);
-            }
             blocageDao.save(blocage.get());
         }
     }
