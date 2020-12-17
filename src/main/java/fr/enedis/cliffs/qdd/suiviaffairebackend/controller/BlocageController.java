@@ -3,6 +3,8 @@ package fr.enedis.cliffs.qdd.suiviaffairebackend.controller;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,8 +19,8 @@ public class BlocageController {
     BlocageService blocageService;
 
     @PostMapping("blocage/update")
-    public void updateBlocage(@RequestParam Long id,@RequestParam Long userId, @RequestParam String choix) {
-        blocageService.updateBlocage(id, userId, choix);
+    public void updateBlocage(@RequestParam Long id, @RequestParam String choix) {
+        blocageService.updateBlocage(id, choix);
     }
 
 }

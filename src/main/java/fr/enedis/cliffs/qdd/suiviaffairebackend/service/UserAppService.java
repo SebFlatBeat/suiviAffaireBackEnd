@@ -30,4 +30,8 @@ public class UserAppService implements UserDetailsService {
     public Optional<UserApp> findById(Long userId) {
         return userAppDao.findById(userId);
     }
+
+    public Optional<UserApp> findByUsername(String username) {
+        return userAppDao.findByUsername(username);
+    }
 }

@@ -7,6 +7,8 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -36,11 +38,12 @@ public class BlocageService {
         return blocageDao.findById(id);
     }
 
-    public void updateBlocage(Long id, Long userId, String choix) {
+    public void updateBlocage(Long id, String choix) {
         Optional<Blocage> blocage = findById(id);
-        Optional<UserApp> userApp = userAppService.findById(userId);
+        User userApp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Optional<UserApp> user = userAppService.findByUsername(userApp.getUsername());
         if (blocage.isPresent()) {
-            blocage.get().setUserApp(userApp.get());
+            blocage.get().setUserApp(user.get());
             if (choix.equals("SGE")) {
                 blocage.get().setBlocageSource(BlocageSource.SGE);
             }
