@@ -17,5 +17,4 @@ public class BlocageController {
     public void updateBlocage(@RequestParam Long id, @RequestParam String choix) {
         blocageService.updateBlocage(id, choix);
     }
-
 }

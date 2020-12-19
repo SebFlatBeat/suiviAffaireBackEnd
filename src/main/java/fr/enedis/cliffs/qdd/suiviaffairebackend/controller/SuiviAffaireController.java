@@ -11,6 +11,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
@@ -32,5 +34,10 @@ public class SuiviAffaireController {
     public Page<SGE> filter(FilterForm filterForm) {
         Pageable pageable = PageRequest.of(0, 5);
         return sgeService.filter(filterForm, pageable);
+    }
+
+    @GetMapping("synthese")
+    public int[] blocagesPercent() {
+        return blocageService.percent();
     }
 }
