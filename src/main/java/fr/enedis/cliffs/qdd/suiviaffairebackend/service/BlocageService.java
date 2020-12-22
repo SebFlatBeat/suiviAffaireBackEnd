@@ -58,11 +58,11 @@ public class BlocageService {
                 case "GEC":
                     blocage.get().setBlocageSource(BlocageSource.GEC);
                     break;
-                case "nonTraite":
+                default:
                     blocage.get().setBlocageSource(BlocageSource.nonTraite);
                     break;
             }
-            blocage.get().setUserApp(user.get());
+            user.ifPresent(app -> blocage.get().setUserApp(app));
             blocageDao.save(blocage.get());
         }
     }
