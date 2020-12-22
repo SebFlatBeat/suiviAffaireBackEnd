@@ -20,9 +20,9 @@ public class UserAppService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<UserApp> userApp = userAppDao.findByUsername(username);
-        if(userApp.isPresent()){
+        if (userApp.isPresent()) {
             return (UserDetails) userApp.get();
-        }else {
+        } else {
             throw new UsernameNotFoundException(String.format("Username[%s] not found"));
         }
     }
