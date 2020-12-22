@@ -47,7 +47,7 @@ public class SuiviAffaireController {
     }
 
     @GetMapping("user")
-    public Optional<UserApp> userApp(@RequestParam String userApp){
-        return userAppService.findByUsername(userApp);
+    public UserApp userApp(@RequestParam String userApp, @RequestParam String password){
+        return userAppService.findByUsernameAndPassword(userApp, password);
     }
 }

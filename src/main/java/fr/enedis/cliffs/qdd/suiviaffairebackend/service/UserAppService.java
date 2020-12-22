@@ -1,5 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
+import fr.enedis.cliffs.qdd.suiviaffairebackend.configuration.BCryptEncoderConfig;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.UserAppDao;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,16 @@ public class UserAppService implements UserDetailsService {
     public Optional<UserApp> findByUsername(String username) {
         return userAppDao.findByUsername(username);
     }
+
+    public UserApp findByUsernameAndPassword(String username, String password) {
+        Optional<UserApp> userApp = userAppDao.findByUsername(username);
+        if (userApp.isPresent()) {
+            boolean matches = BCryptEncoderConfig.passwordencoder().matches(password, userApp.get().getPassword());
+            if (!matches) {
+                return null;
+            }
+        }
+        return userApp.get();
+    }
 }
+
