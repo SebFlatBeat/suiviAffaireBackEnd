@@ -18,13 +18,13 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
     private PasswordEncoder passwordEncoder;
 
+    private static final String INDEX = "/index";
+
     @Bean
-    public UserDetailsService userDetailsService(){
+    @Override
+    public UserDetailsService userDetailsService() {
         return new UserAppService();
     }
 
@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public DaoAuthenticationProvider authenticationProvider(){
+    public DaoAuthenticationProvider authenticationProvider(UserDetailsService userDetailsService) {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder);
         provider.setUserDetailsService(userDetailsService);
@@ -45,17 +45,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-        http    .authorizeRequests().antMatchers("/","/index","/getFiles","/synthese","/analyse/**", "/blocage/**").permitAll()
+        http.httpBasic()
+                .and()
+                .authorizeRequests().antMatchers("/", INDEX, "/register", "/user", "/analyse", "/synthese").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/index")
+                .loginPage(INDEX)
                 .loginProcessingUrl("/login")
                 .failureUrl("/login?error")
                 .and()
                 .logout()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/index")
+                .logoutSuccessUrl(INDEX)
                 .invalidateHttpSession(true).deleteCookies("JSESSIONID");
 
     }
