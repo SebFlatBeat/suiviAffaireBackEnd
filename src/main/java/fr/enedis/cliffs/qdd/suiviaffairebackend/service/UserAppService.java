@@ -46,5 +46,13 @@ public class UserAppService implements UserDetailsService {
         }
         return userApp.get();
     }
+
+    public void saveNewUser(String username, String password, String email) {
+        UserApp newUserApp = new UserApp();
+        newUserApp.setUsername(username);
+        newUserApp.setPassword(password);
+        newUserApp.setEmail(email);
+        userAppDao.save(newUserApp);
+    }
 }
 

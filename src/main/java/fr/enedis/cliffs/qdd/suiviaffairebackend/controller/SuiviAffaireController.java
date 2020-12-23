@@ -50,4 +50,10 @@ public class SuiviAffaireController {
     public UserApp userApp(@RequestParam String userApp, @RequestParam String password){
         return userAppService.findByUsernameAndPassword(userApp, password);
     }
+
+    @PostMapping("register")
+    public void newUser(@RequestParam String username,
+                        @RequestParam String password, @RequestParam String email){
+        userAppService.saveNewUser(username,password,email);
+    }
 }
