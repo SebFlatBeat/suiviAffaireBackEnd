@@ -8,8 +8,6 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.utils.PercentageCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,10 +41,9 @@ public class BlocageService {
         return blocageDao.findById(id);
     }
 
-    public void updateBlocage(Long id, String choix) {
+    public void updateBlocage(Long id, String choix, String username) {
         Optional<Blocage> blocage = findById(id);
-        User userApp = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Optional<UserApp> user = userAppService.findByUsername(userApp.getUsername());
+        Optional<UserApp> user = userAppService.findByUsername(username);
         if (blocage.isPresent()) {
             switch (choix) {
                 case "SGE":
@@ -58,11 +55,11 @@ public class BlocageService {
                 case "GEC":
                     blocage.get().setBlocageSource(BlocageSource.GEC);
                     break;
-                case "nonTraite":
+                default:
                     blocage.get().setBlocageSource(BlocageSource.nonTraite);
                     break;
             }
-            blocage.get().setUserApp(user.get());
+            user.ifPresent(app -> blocage.get().setUserApp(app));
             blocageDao.save(blocage.get());
         }
     }

@@ -14,7 +14,7 @@ public class BlocageController {
     BlocageService blocageService;
 
     @PutMapping("blocage")
-    public void updateBlocage(@RequestParam Long id, @RequestParam String choix) {
-        blocageService.updateBlocage(id, choix);
+    public void updateBlocage(@RequestParam Long id, @RequestParam String choix, @RequestParam String username) {
+        blocageService.updateBlocage(id, choix, username);
     }
 }
