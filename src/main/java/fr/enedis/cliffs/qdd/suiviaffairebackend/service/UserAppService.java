@@ -43,12 +43,13 @@ public class UserAppService implements UserDetailsService {
     public UserApp findByUsernameAndPassword(String username, String password) throws WrongPasswordException, UserNotFoundException {
         Optional<UserApp> userApp = userAppDao.findByUsername(username);
         if (userApp.isPresent()) {
-            boolean matches = BCryptEncoderConfig.passwordencoder().matches(password, userApp.get().getPassword());
+            String passwordMatch = userApp.get().getPassword();
+            boolean matches = BCryptEncoderConfig.passwordencoder().matches(password, passwordMatch);
             if (!matches) {
-                throw new WrongPasswordException("Erreur dans le mot de passe");
+                throw new WrongPasswordException("Mot de passe incorrect");
             }
         }else{
-            throw new UserNotFoundException("Cet utilisateur n'exsite pas");
+            throw new UserNotFoundException("Vous n'êtes pas habilité");
         }
         return userApp.get();
     }
