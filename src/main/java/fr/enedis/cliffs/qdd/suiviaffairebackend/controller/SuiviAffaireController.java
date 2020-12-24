@@ -4,6 +4,10 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.NotNniException;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.UserExistException;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.UserNotFoundException;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.WrongPasswordException;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGEService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService;
@@ -47,13 +51,14 @@ public class SuiviAffaireController {
     }
 
     @GetMapping("user")
-    public UserApp userApp(@RequestParam String userApp, @RequestParam String password){
+    public UserApp userApp(@RequestParam String userApp, @RequestParam String password) throws UserNotFoundException, WrongPasswordException {
         return userAppService.findByUsernameAndPassword(userApp, password);
     }
 
     @PostMapping("register")
     public void newUser(@RequestParam String username,
-                        @RequestParam String password, @RequestParam String email){
+                        @RequestParam String password, @RequestParam String email)
+            throws UserExistException, NotNniException {
         userAppService.saveNewUser(username,password,email);
     }
 }
