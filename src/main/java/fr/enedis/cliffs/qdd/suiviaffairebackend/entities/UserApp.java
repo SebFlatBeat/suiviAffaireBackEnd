@@ -5,7 +5,9 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.configuration.BCryptEncoderConfi
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class UserApp {
@@ -14,13 +16,15 @@ public class UserApp {
     @GeneratedValue
     private Long Id;
 
-    @NotNull //Ajouter des contraintes de validations
+    @NotNull
+    @Pattern(regexp = "^\\b[a-z[A-Z]][0-9]{5}?$")
     private String username;
 
-    @NotNull //Rendre le mot de passe crypté
+    @NotNull
     private String password;
 
     @NotNull
+    @Email
     private String email;
 
     public UserApp() {
