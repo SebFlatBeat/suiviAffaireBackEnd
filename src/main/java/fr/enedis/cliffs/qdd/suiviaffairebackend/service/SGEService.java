@@ -27,24 +27,4 @@ public class SGEService {
         return sgeDao.findAll(pageable);
     }
 
-    public Page<SGE> filter(FilterForm filterForm, Pageable pageable) {
-        return sgeDao.filter(filterForm.getNumeroAffaire(),
-                filterForm.getPrm(),
-                filterForm.getIdc(),
-                filterForm.getPortefeuille(),
-                filterForm.getPrestation(),
-                filterForm.getContratDemande(),
-                filterForm.getContratInitial(),
-                filterForm.getEtatContractuel(),
-                filterForm.getModeReleve(),
-                filterForm.getNumeroDt(),
-                filterForm.getStatutDt(),
-                filterForm.getPrestationRealise(),
-                filterForm.getRealisation(),
-                filterForm.getEtatAffaire(),
-                filterForm.getIntervention(),
-                filterForm.getBlocageSource(),
-                pageable
-        );
-    }
 }

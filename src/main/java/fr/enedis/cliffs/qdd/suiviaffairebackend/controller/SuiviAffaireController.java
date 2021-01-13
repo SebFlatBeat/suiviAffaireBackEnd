@@ -2,7 +2,6 @@ package fr.enedis.cliffs.qdd.suiviaffairebackend.controller;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.NotNniException;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.UserExistException;
@@ -38,9 +37,9 @@ public class SuiviAffaireController {
     }
 
     @GetMapping("filter")
-    public Page<SGE> filter(FilterForm filterForm) {
+    public Page<Blocage> filter(FilterForm filterForm) {
         Pageable pageable = PageRequest.of(0, 5);
-        return sgeService.filter(filterForm, pageable);
+        return blocageService.filter(filterForm, pageable);
     }
 
     @GetMapping("synthese")

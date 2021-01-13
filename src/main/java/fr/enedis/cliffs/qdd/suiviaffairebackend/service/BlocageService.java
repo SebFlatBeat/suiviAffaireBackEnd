@@ -1,8 +1,10 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.BlocageDao;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.utils.PercentageCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,12 +58,24 @@ public class BlocageService {
                     blocage.get().setBlocageSource(BlocageSource.GEC);
                     break;
                 default:
-                    blocage.get().setBlocageSource(BlocageSource.nonTraite);
+                    blocage.get().setBlocageSource(BlocageSource.NONTRAITE);
                     break;
             }
             user.ifPresent(app -> blocage.get().setUserApp(app));
             blocageDao.save(blocage.get());
         }
+    }
+
+    public Page<Blocage> filter(FilterForm filterForm, Pageable pageable) {
+        return blocageDao.filter(filterForm.getNumeroAffaire(),
+                filterForm.getPrm(),
+                filterForm.getIdc(),
+                filterForm.getPortefeuille(),
+                filterForm.getEtatContractuel(),
+                filterForm.getEtatAffaire(),
+                filterForm.getBlocageSource(),
+                pageable
+        );
     }
 
     public int[] percent() {
@@ -73,7 +87,7 @@ public class BlocageService {
         int total = 0;
         for (Blocage b : blocageList) {
             switch (b.getBlocageSource()) {
-                case nonTraite:
+                case NONTRAITE:
                     nonTraite++;
                     total++;
                     break;
