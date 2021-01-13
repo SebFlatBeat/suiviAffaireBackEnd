@@ -161,4 +161,21 @@ public class SGE {
     public void setGec(GEC gec) {
         this.gec = gec;
     }
+
+    @Override
+    public String toString() {
+        return "SGE{" +
+                "Id=" + Id +
+                ", numeroAffaire='" + numeroAffaire + '\'' +
+                ", prm=" + prm +
+                ", idc=" + idc +
+                ", portefeuille='" + portefeuille + '\'' +
+                ", prestation='" + prestation + '\'' +
+                ", contratDemande='" + contratDemande + '\'' +
+                ", contratInitial='" + contratInitial + '\'' +
+                ", sgo=" + sgo +
+                ", gec=" + gec +
+                ", blocage=" + blocage +
+                '}';
+    }
 }

@@ -63,4 +63,13 @@ public class SGO {
         this.intervention = intervention;
     }
 
+    @Override
+    public String toString() {
+        return "SGO{" +
+                "Id=" + Id +
+                ", numeroAffaire='" + numeroAffaire + '\'' +
+                ", etatAffaire='" + etatAffaire + '\'' +
+                ", intervention='" + intervention + '\'' +
+                '}';
+    }
 }

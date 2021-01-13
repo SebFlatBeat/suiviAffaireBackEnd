@@ -106,4 +106,18 @@ public class GEC {
     public void setRealisation(String realisation) {
         this.realisation = realisation;
     }
+
+    @Override
+    public String toString() {
+        return "GEC{" +
+                "Id=" + Id +
+                ", idc=" + idc +
+                ", etatContractuel='" + etatContractuel + '\'' +
+                ", modeReleve='" + modeReleve + '\'' +
+                ", numeroDt=" + numeroDt +
+                ", statutDt='" + statutDt + '\'' +
+                ", prestationRealise='" + prestationRealise + '\'' +
+                ", realisation='" + realisation + '\'' +
+                '}';
+    }
 }

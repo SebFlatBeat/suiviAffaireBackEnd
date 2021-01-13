@@ -4,6 +4,7 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import javax.validation.constraints.Null;
+import java.util.List;
 
 @Entity
 public class Blocage {
@@ -21,13 +22,14 @@ public class Blocage {
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
     private SGE sge;
 
+
     @Enumerated(EnumType.STRING)
     private BlocageSource blocageSource;
 
     public Blocage() {
     }
 
-    public Blocage(Long id, UserApp userApp, SGE sge, BlocageSource blocageSource) {
+    public Blocage(Long id, @Null UserApp userApp, SGE sge, BlocageSource blocageSource) {
         Id = id;
         this.userApp = userApp;
         this.sge = sge;
@@ -64,5 +66,15 @@ public class Blocage {
 
     public void setBlocageSource(BlocageSource blocageSource) {
         this.blocageSource = blocageSource;
+    }
+
+    @Override
+    public String toString() {
+        return "Blocage{" +
+                "Id=" + Id +
+                ", userApp=" + userApp +
+                ", sge=" + sge +
+                ", blocageSource=" + blocageSource +
+                '}';
     }
 }
