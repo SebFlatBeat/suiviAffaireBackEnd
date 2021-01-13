@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.Scanner;
 
+
 @Service
 public class Reader {
     @Autowired
@@ -111,7 +112,7 @@ public class Reader {
                 }
                 sgeService.saveSGE(sge);
                 blocage.setSge(sge);
-                blocage.setBlocageSource(BlocageSource.nonTraite);
+                blocage.setBlocageSource(BlocageSource.NONTRAITE);
                 blocageService.saveBlocage(blocage);
             }
             scanner.close();
