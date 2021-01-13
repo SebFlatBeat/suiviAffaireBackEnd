@@ -45,6 +45,11 @@ public class SGE {
     @Cascade(CascadeType.DETACH)
     private GEC gec;
 
+    @OneToOne(mappedBy = "sge")
+    @Cascade(CascadeType.DETACH)
+    private Blocage blocage;
+
+
     /**
      *Instantiate a new SGE
      */
@@ -63,7 +68,7 @@ public class SGE {
      * @param contratInitial
      */
     public SGE(Long id, String numeroAffaire, Long prm, Long idc, String portefeuille,
-               String prestation, String contratDemande, String contratInitial, SGO sgo, GEC gec) {
+               String prestation, String contratDemande, String contratInitial, SGO sgo, GEC gec, Blocage blocage) {
         Id = id;
         this.numeroAffaire = numeroAffaire;
         this.prm = prm;
@@ -74,6 +79,7 @@ public class SGE {
         this.contratInitial = contratInitial;
         this.sgo = sgo;
         this.gec = gec;
+        this.blocage = blocage;
     }
 
     public Long getId() {

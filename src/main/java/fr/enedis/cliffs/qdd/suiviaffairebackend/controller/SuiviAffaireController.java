@@ -17,8 +17,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
@@ -59,6 +57,11 @@ public class SuiviAffaireController {
     public void newUser(@RequestParam String username,
                         @RequestParam String password, @RequestParam String email)
             throws UserExistException, NotNniException {
-        userAppService.saveNewUser(username,password,email);
+        userAppService.saveNewUser(username, password, email);
+    }
+
+    @PostMapping("/logout")
+    public void userLogout() {
+    // default implementation
     }
 }

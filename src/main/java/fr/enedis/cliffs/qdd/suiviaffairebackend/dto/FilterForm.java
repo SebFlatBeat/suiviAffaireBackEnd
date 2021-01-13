@@ -20,6 +20,7 @@ public class FilterForm {
     private String realisation;
     private String etatAffaire;
     private String intervention;
+    private String blocageSource;
 
     public FilterForm() {
     }
@@ -27,7 +28,7 @@ public class FilterForm {
     public FilterForm(String numeroAffaire, Long prm, Long idc, String portefeuille, String prestation,
                       String contratDemande, String contratInitial, String etatContractuel,
                       String modeReleve, Long numeroDt, String statutDt, String prestationRealise,
-                      String realisation, String etatAffaire, String intervention) {
+                      String realisation, String etatAffaire, String intervention, String blocageSource) {
         this.numeroAffaire = numeroAffaire;
         this.prm = prm;
         this.idc = idc;
@@ -43,6 +44,7 @@ public class FilterForm {
         this.realisation = realisation;
         this.etatAffaire = etatAffaire;
         this.intervention = intervention;
+        this.blocageSource = blocageSource;
     }
 
     public String getNumeroAffaire() {
@@ -163,5 +165,13 @@ public class FilterForm {
 
     public void setIntervention(String intervention) {
         this.intervention = intervention;
+    }
+
+    public String getBlocageSource() {
+        return blocageSource;
+    }
+
+    public void setBlocageSource(String blocageSource) {
+        this.blocageSource = blocageSource;
     }
 }

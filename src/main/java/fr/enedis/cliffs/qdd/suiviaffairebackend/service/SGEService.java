@@ -43,6 +43,7 @@ public class SGEService {
                 filterForm.getRealisation(),
                 filterForm.getEtatAffaire(),
                 filterForm.getIntervention(),
+                filterForm.getBlocageSource(),
                 pageable
         );
     }

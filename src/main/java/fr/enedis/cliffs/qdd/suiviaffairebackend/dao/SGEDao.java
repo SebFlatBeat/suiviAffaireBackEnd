@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 public interface SGEDao extends JpaRepository<SGE, Long> {
@@ -31,7 +32,8 @@ public interface SGEDao extends JpaRepository<SGE, Long> {
             "and (:prestationRealise is null or s.gec.prestationRealise =:prestationRealise) " +
             "and (:realisation is null or s.gec.realisation =:realisation) " +
             "and (:etatAffaire is null or s.sgo.etatAffaire =:etatAffaire) " +
-            "and (:intervention is null or s.sgo.intervention =:intervention)"
+            "and (:intervention is null or s.sgo.intervention =:intervention)" +
+            "and (:blocageSource is null  or s.blocage.blocageSource =:blocageSource)"
     )
     Page<SGE> filter(@Param("numeroAffaire") String numeroAffaire,
                      @Param("prm") Long prm,
@@ -48,6 +50,7 @@ public interface SGEDao extends JpaRepository<SGE, Long> {
                      @Param("realisation") String realisation,
                      @Param("etatAffaire") String etatAffaire,
                      @Param("intervention") String intervention,
+                     @Param("blocageSource") String blocageSource,
                      Pageable pageable
     );
 }
