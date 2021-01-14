@@ -6,9 +6,6 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @JsonPropertyOrder({"Id", "userApp", "sge", "blocageSource"})
 public class BlocageResponse {
 
