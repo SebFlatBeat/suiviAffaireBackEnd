@@ -1,18 +1,26 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.dto;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public class FilterForm {
 
+    @JsonProperty("numeroAffaire")
     private String numeroAffaire;
+    @JsonProperty("prm")
     private Long prm;
+    @JsonProperty("idc")
     private Long idc;
+    @JsonProperty("portefeuille")
     private String portefeuille;
+    @JsonProperty("etatContractuel")
     private String etatContractuel;
+    @JsonProperty("etatAffaire")
     private String etatAffaire;
+    @JsonProperty("blocageSource")
     private String blocageSource;
 
     public FilterForm() {
@@ -78,8 +86,13 @@ public class FilterForm {
         this.etatAffaire = etatAffaire;
     }
 
-    public Enum getBlocageSource() {
-        return BlocageSource.valueOf(blocageSource);
+    public BlocageSource getBlocageSource() {
+        if (!blocageSource.isEmpty()) {
+            return BlocageSource.valueOf(blocageSource);
+        } else {
+            return null;
+        }
+
     }
 
     public void setBlocageSource(String blocageSource) {

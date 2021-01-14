@@ -1,6 +1,7 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.dao;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -23,13 +24,13 @@ public interface BlocageDao extends JpaRepository<Blocage, Long> {
             "and (:etatAffaire is null or b.sge.sgo.etatAffaire =:etatAffaire) " +
             "and (:blocageSource is null or b.blocageSource =:blocageSource)"
     )
-    Page<Blocage> filter(@Param("numeroAffaire") String numeroAffaire,
+    Page<Blocage> findByfilter(@Param("numeroAffaire") String numeroAffaire,
                          @Param("prm") Long prm,
                          @Param("idc") Long idc,
                          @Param("portefeuille") String portefeuille,
                          @Param("etatContractuel") String etatContractuel,
                          @Param("etatAffaire") String etatAffaire,
-                         @Param("blocageSource") Enum blocageSource,
+                         @Param("blocageSource") BlocageSource blocageSource,
                          Pageable pageable
     );
 

@@ -36,8 +36,8 @@ public class SuiviAffaireController {
         return blocageService.findAllPageable(pageable);
     }
 
-    @GetMapping("filter")
-    public Page<Blocage> filter(FilterForm filterForm) {
+    @PostMapping("filter")
+    public Page<Blocage> filter(@RequestBody FilterForm filterForm) {
         Pageable pageable = PageRequest.of(0, 5);
         return blocageService.filter(filterForm, pageable);
     }

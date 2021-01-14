@@ -4,7 +4,6 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.BlocageDao;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.utils.PercentageCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,7 +66,7 @@ public class BlocageService {
     }
 
     public Page<Blocage> filter(FilterForm filterForm, Pageable pageable) {
-        return blocageDao.filter(filterForm.getNumeroAffaire(),
+        return blocageDao.findByfilter(filterForm.getNumeroAffaire(),
                 filterForm.getPrm(),
                 filterForm.getIdc(),
                 filterForm.getPortefeuille(),
