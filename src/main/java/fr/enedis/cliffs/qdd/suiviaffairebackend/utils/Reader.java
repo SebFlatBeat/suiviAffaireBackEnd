@@ -31,9 +31,8 @@ public class Reader {
     public void readFileGEC(String csvFile) {
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
-            String skipHeader;
             String line;
-            skipHeader = scanner.nextLine();
+            scanner.nextLine();
             while (scanner.hasNextLine()) {
                 GEC gec = new GEC();
                 line = scanner.nextLine();
@@ -60,9 +59,8 @@ public class Reader {
     public void readFileSGO(String csvFile) {
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
-            String skipHeader;
             String line;
-            skipHeader = scanner.nextLine();
+            scanner.nextLine();
             while (scanner.hasNextLine()) {
                 SGO sgo = new SGO();
                 line = scanner.nextLine();
@@ -81,9 +79,8 @@ public class Reader {
     public void readFileSGE(String csvFile) {
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
-            String skipHeader;
             String line;
-            skipHeader = scanner.nextLine();
+            scanner.nextLine();
             List<GEC> gecList = gecService.findAll();
             List<SGO> sgoList = sgoService.findAll();
             while (scanner.hasNextLine()) {

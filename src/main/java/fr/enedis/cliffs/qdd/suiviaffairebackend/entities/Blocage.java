@@ -4,7 +4,6 @@ import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import javax.validation.constraints.Null;
-import java.util.List;
 
 @Entity
 public class Blocage {
