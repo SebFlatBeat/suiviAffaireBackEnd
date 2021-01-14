@@ -6,15 +6,19 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 
+import java.util.List;
 
-public interface BlocageDao extends JpaRepository<Blocage, Long> {
+
+public interface BlocageDao extends PagingAndSortingRepository<Blocage, Long> {
 
     Page<Blocage> findAll(Pageable pageable);
 
     Blocage save(Blocage blocage);
 
+    List<Blocage> findAll();
 
     @Query("SELECT b FROM Blocage b WHERE (:numeroAffaire is null or b.sge.numeroAffaire =:numeroAffaire) " +
             "and (:prm is null or b.sge.prm =:prm) " +
@@ -25,13 +29,12 @@ public interface BlocageDao extends JpaRepository<Blocage, Long> {
             "and (:blocageSource is null or b.blocageSource =:blocageSource)"
     )
     Page<Blocage> findByfilter(@Param("numeroAffaire") String numeroAffaire,
-                         @Param("prm") Long prm,
-                         @Param("idc") Long idc,
-                         @Param("portefeuille") String portefeuille,
-                         @Param("etatContractuel") String etatContractuel,
-                         @Param("etatAffaire") String etatAffaire,
-                         @Param("blocageSource") BlocageSource blocageSource,
-                         Pageable pageable
+                               @Param("prm") Long prm,
+                               @Param("idc") Long idc,
+                               @Param("portefeuille") String portefeuille,
+                               @Param("etatContractuel") String etatContractuel,
+                               @Param("etatAffaire") String etatAffaire,
+                               @Param("blocageSource") BlocageSource blocageSource,
+                               Pageable pageable
     );
-
 }

@@ -1,5 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.controller;
 
+import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.BlocageResponse;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
@@ -12,9 +13,14 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGEService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -31,15 +37,27 @@ public class SuiviAffaireController {
     UserAppService userAppService;
 
     @GetMapping("analyse")
-    public Page<Blocage> blocagePagined() {
-        Pageable pageable = PageRequest.of(0, 5);
-        return blocageService.findAllPageable(pageable);
+    public Page<BlocageResponse> blocagePagined(@RequestParam(name = "page", defaultValue = "0") int page,
+                                                @RequestParam(name = "size", defaultValue = "5") int size) {
+        PageRequest pageRequest = PageRequest.of(page, size);
+        Page<Blocage> pageResult = blocageService.findAllPageable(pageRequest);
+        List<BlocageResponse> blocageResponses = pageResult
+                .stream()
+                .map(BlocageResponse::new)
+                .collect(toList());
+        return new PageImpl<>(blocageResponses, pageRequest, pageResult.getTotalElements());
     }
 
     @PostMapping("filter")
-    public Page<Blocage> filter(@RequestBody FilterForm filterForm) {
-        Pageable pageable = PageRequest.of(0, 5);
-        return blocageService.filter(filterForm, pageable);
+    public Page<BlocageResponse> filter(@RequestBody FilterForm filterForm, @RequestParam(name = "page", defaultValue = "0") int page,
+                                @RequestParam(name = "size", defaultValue = "5") int size) {
+        PageRequest pageRequest = PageRequest.of(page, size);
+        Page<Blocage> pageResult = blocageService.filter(filterForm, pageRequest);
+        List<BlocageResponse> blocageResponses = pageResult
+                .stream()
+                .map(BlocageResponse::new)
+                .collect(toList());
+        return new PageImpl<>(blocageResponses, pageRequest, pageResult.getTotalElements());
     }
 
     @GetMapping("synthese")
@@ -61,6 +79,6 @@ public class SuiviAffaireController {
 
     @PostMapping("/logout")
     public void userLogout() {
-    // default implementation
+        // default implementation
     }
 }

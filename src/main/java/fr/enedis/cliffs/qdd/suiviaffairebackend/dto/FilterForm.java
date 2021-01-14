@@ -39,7 +39,11 @@ public class FilterForm {
     }
 
     public String getNumeroAffaire() {
-        return numeroAffaire;
+        if (!numeroAffaire.isEmpty()) {
+            return numeroAffaire;
+        } else {
+            return null;
+        }
     }
 
     public void setNumeroAffaire(String numeroAffaire) {
@@ -63,7 +67,11 @@ public class FilterForm {
     }
 
     public String getPortefeuille() {
-        return portefeuille;
+        if (!portefeuille.isEmpty()) {
+            return portefeuille;
+        } else {
+            return null;
+        }
     }
 
     public void setPortefeuille(String portefeuille) {
@@ -71,7 +79,10 @@ public class FilterForm {
     }
 
     public String getEtatContractuel() {
-        return etatContractuel;
+        if (!etatContractuel.isEmpty()) {
+            return etatContractuel;
+        }
+        return null;
     }
 
     public void setEtatContractuel(String etatContractuel) {
@@ -79,7 +90,11 @@ public class FilterForm {
     }
 
     public String getEtatAffaire() {
-        return etatAffaire;
+        if (!etatAffaire.isEmpty()) {
+            return etatAffaire;
+        } else {
+            return null;
+        }
     }
 
     public void setEtatAffaire(String etatAffaire) {

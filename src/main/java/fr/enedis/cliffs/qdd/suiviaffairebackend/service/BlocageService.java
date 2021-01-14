@@ -77,6 +77,13 @@ public class BlocageService {
         );
     }
 
+    public Page<Blocage> filter2(FilterForm filterForm, Pageable pageable) {
+        return blocageDao.findByfilter2(
+                filterForm.getBlocageSource(),
+                pageable
+        );
+    }
+
     public int[] percent() {
         List<Blocage> blocageList = blocageDao.findAll();
         int nonTraite = 0;
