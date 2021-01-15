@@ -37,7 +37,7 @@ public class SuiviAffaireController {
 
     @GetMapping("analyse")
     public Page<BlocageResponse> blocagePagined(@RequestParam(name = "page", defaultValue = "0") int page,
-                                                @RequestParam(name = "size", defaultValue = "5") int size) {
+                                                @RequestParam(name = "size", defaultValue = "3") int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         Page<Blocage> pageResult = blocageService.findAllPageable(pageRequest);
         List<BlocageResponse> blocageResponses = pageResult
@@ -49,7 +49,7 @@ public class SuiviAffaireController {
 
     @PostMapping("filter")
     public Page<BlocageResponse> filter(@RequestBody FilterForm filterForm, @RequestParam(name = "page", defaultValue = "0") int page,
-                                @RequestParam(name = "size", defaultValue = "5") int size) {
+                                @RequestParam(name = "size", defaultValue = "3") int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         Page<Blocage> pageResult = blocageService.filter(filterForm, pageRequest);
         List<BlocageResponse> blocageResponses = pageResult
