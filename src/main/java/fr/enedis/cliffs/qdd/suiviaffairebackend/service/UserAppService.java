@@ -23,7 +23,7 @@ public class UserAppService implements UserDetailsService {
 
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws RuntimeException {
+    public UserDetails loadUserByUsername(String username){
         Optional<UserApp> userApp = userAppDao.findByUsername(username);
         if (userApp.isPresent()) {
             return (UserDetails) userApp.get();

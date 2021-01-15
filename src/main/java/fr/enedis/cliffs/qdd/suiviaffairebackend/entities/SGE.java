@@ -65,7 +65,7 @@ public class SGE {
      * @param gec
      * @param blocage
      */
-    public SGE(Long id, @NotNull String numeroAffaire, @NotNull Long prm, @NotNull Long idc, @NotNull String portefeuille, @NotNull String prestation, @NotNull String contratDemande, @NotNull String contratInitial, COSY cosy, GEC gec, Blocage blocage) {
+    public SGE(Long id, @NotNull String numeroAffaire, @NotNull Long prm, @NotNull Long idc, @NotNull String portefeuille, @NotNull String prestation, @NotNull String contratDemande, @NotNull String contratInitial, COSY cosy, GEC gec) {
         this.id = id;
         this.numeroAffaire = numeroAffaire;
         this.prm = prm;

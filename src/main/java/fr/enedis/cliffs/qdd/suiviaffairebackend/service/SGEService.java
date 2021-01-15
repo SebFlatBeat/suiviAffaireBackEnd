@@ -1,7 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.SGEDao;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
