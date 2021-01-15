@@ -24,7 +24,7 @@ public interface BlocageDao extends PagingAndSortingRepository<Blocage, Long> {
             "and (:idc is null or b.sge.idc =:idc) " +
             "and (:portefeuille is null or b.sge.portefeuille =:portefeuille) " +
             "and (:etatContractuel is null or b.sge.gec.etatContractuel =:etatContractuel) " +
-            "and (:etatAffaire is null or b.sge.sgo.etatAffaire =:etatAffaire) " +
+            "and (:etatAffaire is null or b.sge.cosy.etatAffaire =:etatAffaire) " +
             "and (:blocageSource is null or b.blocageSource =:blocageSource)"
     )
     Page<Blocage> findByfilter(@Param("numeroAffaire") String numeroAffaire,

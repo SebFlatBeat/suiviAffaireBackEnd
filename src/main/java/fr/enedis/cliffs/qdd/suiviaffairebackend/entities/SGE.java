@@ -14,7 +14,7 @@ public class SGE {
 
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @NotNull
     private String numeroAffaire;
@@ -39,7 +39,7 @@ public class SGE {
 
     @OneToOne
     @Cascade(CascadeType.DETACH)
-    private SGO sgo;
+    private COSY cosy;
 
     @OneToOne
     @Cascade(CascadeType.DETACH)
@@ -51,13 +51,12 @@ public class SGE {
 
 
     /**
-     *Instantiate a new SGE
+     * Instantiate a new SGE
      */
     public SGE() {
     }
 
     /**
-     *
      * @param id
      * @param numeroAffaire
      * @param prm
@@ -66,10 +65,12 @@ public class SGE {
      * @param prestation
      * @param contratDemande
      * @param contratInitial
+     * @param cosy
+     * @param gec
+     * @param blocage
      */
-    public SGE(Long id, String numeroAffaire, Long prm, Long idc, String portefeuille,
-               String prestation, String contratDemande, String contratInitial, SGO sgo, GEC gec, Blocage blocage) {
-        Id = id;
+    public SGE(Long id, @NotNull String numeroAffaire, @NotNull Long prm, @NotNull Long idc, @NotNull String portefeuille, @NotNull String prestation, @NotNull String contratDemande, @NotNull String contratInitial, COSY cosy, GEC gec, Blocage blocage) {
+        this.id = id;
         this.numeroAffaire = numeroAffaire;
         this.prm = prm;
         this.idc = idc;
@@ -77,17 +78,17 @@ public class SGE {
         this.prestation = prestation;
         this.contratDemande = contratDemande;
         this.contratInitial = contratInitial;
-        this.sgo = sgo;
+        this.cosy = cosy;
         this.gec = gec;
         this.blocage = blocage;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNumeroAffaire() {
@@ -146,12 +147,12 @@ public class SGE {
         this.contratInitial = contratInitial;
     }
 
-    public SGO getSgo() {
-        return sgo;
+    public COSY getCosy() {
+        return cosy;
     }
 
-    public void setSgo(SGO sgo) {
-        this.sgo = sgo;
+    public void setCosy(COSY cosy) {
+        this.cosy = cosy;
     }
 
     public GEC getGec() {
@@ -162,10 +163,18 @@ public class SGE {
         this.gec = gec;
     }
 
+    public Blocage getBlocage() {
+        return blocage;
+    }
+
+    public void setBlocage(Blocage blocage) {
+        this.blocage = blocage;
+    }
+
     @Override
     public String toString() {
         return "SGE{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", numeroAffaire='" + numeroAffaire + '\'' +
                 ", prm=" + prm +
                 ", idc=" + idc +
@@ -173,7 +182,7 @@ public class SGE {
                 ", prestation='" + prestation + '\'' +
                 ", contratDemande='" + contratDemande + '\'' +
                 ", contratInitial='" + contratInitial + '\'' +
-                ", sgo=" + sgo +
+                ", cosy=" + cosy +
                 ", gec=" + gec +
                 ", blocage=" + blocage +
                 '}';

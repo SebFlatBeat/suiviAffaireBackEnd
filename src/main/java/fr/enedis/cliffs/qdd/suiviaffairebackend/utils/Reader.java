@@ -4,7 +4,7 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.*;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.GECService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGEService;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGOService;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.service.COSYService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class Reader {
     GECService gecService;
 
     @Autowired
-    SGOService sgoService;
+    COSYService cosyService;
 
     @Autowired
     BlocageService blocageService;
@@ -56,19 +56,19 @@ public class Reader {
         }
     }
 
-    public void readFileSGO(String csvFile) {
+    public void readFileCOSY(String csvFile) {
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
             scanner.nextLine();
             while (scanner.hasNextLine()) {
-                SGO sgo = new SGO();
+                COSY cosy = new COSY();
                 line = scanner.nextLine();
                 String[] results = line.split(";", -1);
-                sgo.setNumeroAffaire(results[0]);
-                sgo.setEtatAffaire(results[1]);
-                sgo.setIntervention(results[2]);
-                sgoService.saveSGO(sgo);
+                cosy.setNumeroAffaire(results[0]);
+                cosy.setEtatAffaire(results[1]);
+                cosy.setIntervention(results[2]);
+                cosyService.saveCOSY(cosy);
             }
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -82,7 +82,7 @@ public class Reader {
             String line;
             scanner.nextLine();
             List<GEC> gecList = gecService.findAll();
-            List<SGO> sgoList = sgoService.findAll();
+            List<COSY> cosyList = cosyService.findAll();
             while (scanner.hasNextLine()) {
                 SGE sge = new SGE();
                 Blocage blocage = new Blocage();
@@ -102,9 +102,9 @@ public class Reader {
                         sge.setGec(g);
                     }
                 }
-                for (SGO s : sgoList) {
-                    if (s.getNumeroAffaire().equals(sge.getNumeroAffaire())) {
-                        sge.setSgo(s);
+                for (COSY c : cosyList) {
+                    if (c.getNumeroAffaire().equals(sge.getNumeroAffaire())) {
+                        sge.setCosy(c);
                     }
                 }
                 sgeService.saveSGE(sge);

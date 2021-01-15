@@ -14,7 +14,7 @@ public class UserApp {
 
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @NotNull
     @Pattern(regexp = "^\\b[a-z[A-Z]][0-9]{5}?$")
@@ -30,19 +30,19 @@ public class UserApp {
     public UserApp() {
     }
 
-    public UserApp(Long id, String username, String password, String email) {
-        Id = id;
+    public UserApp(Long id, @NotNull @Pattern(regexp = "^\\b[a-z[A-Z]][0-9]{5}?$") String username, @NotNull String password, @NotNull @Email String email) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getUsername() {
@@ -72,7 +72,7 @@ public class UserApp {
     @Override
     public String toString() {
         return "UserApp{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +

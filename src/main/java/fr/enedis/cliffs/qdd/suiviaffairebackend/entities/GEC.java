@@ -10,7 +10,7 @@ public class GEC {
 
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @NotNull
     private Long idc;
@@ -31,9 +31,8 @@ public class GEC {
     public GEC() {
     }
 
-    public GEC(Long id, Long idc, String etatContractuel, String modeReleve, Long numeroDt, String statutDt,
-               String prestationRealise, String realisation) {
-        Id = id;
+    public GEC(Long id, @NotNull Long idc, @NotNull String etatContractuel, String modeReleve, Long numeroDt, String statutDt, String prestationRealise, String realisation) {
+        this.id = id;
         this.idc = idc;
         this.etatContractuel = etatContractuel;
         this.modeReleve = modeReleve;
@@ -44,11 +43,11 @@ public class GEC {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public Long getIdc() {
@@ -110,7 +109,7 @@ public class GEC {
     @Override
     public String toString() {
         return "GEC{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", idc=" + idc +
                 ", etatContractuel='" + etatContractuel + '\'' +
                 ", modeReleve='" + modeReleve + '\'' +

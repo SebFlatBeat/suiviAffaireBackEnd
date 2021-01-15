@@ -12,8 +12,8 @@ public class Data {
     @Value("${inputSGEFile}")
     String inputSGEFile;
 
-    @Value("${inputSGOFile}")
-    String inputSGOFile;
+    @Value("${inputCOSYFile}")
+    String inputCOSYFile;
 
     @Autowired
     Reader reader;
@@ -21,7 +21,7 @@ public class Data {
     public void parsing(){
         try {
             reader.readFileGEC(inputGECFile);
-            reader.readFileSGO(inputSGOFile);
+            reader.readFileCOSY(inputCOSYFile);
             reader.readFileSGE(inputSGEFile);
         }catch (Exception e){
             e.printStackTrace();

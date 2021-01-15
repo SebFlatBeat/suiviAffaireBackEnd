@@ -6,11 +6,11 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class SGO {
+public class COSY {
 
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @NotNull
     private String numeroAffaire;
@@ -20,23 +20,22 @@ public class SGO {
 
     private String intervention;
 
-    public SGO() {
+    public COSY() {
     }
 
-    public SGO(Long id, String numeroAffaire, String etatAffaire, String intervention) {
-        Id = id;
+    public COSY(Long id, @NotNull String numeroAffaire, @NotNull String etatAffaire, String intervention) {
+        this.id = id;
         this.numeroAffaire = numeroAffaire;
         this.etatAffaire = etatAffaire;
         this.intervention = intervention;
     }
 
     public Long getId() {
-
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getNumeroAffaire() {
@@ -65,8 +64,8 @@ public class SGO {
 
     @Override
     public String toString() {
-        return "SGO{" +
-                "Id=" + Id +
+        return "COSY{" +
+                "id=" + id +
                 ", numeroAffaire='" + numeroAffaire + '\'' +
                 ", etatAffaire='" + etatAffaire + '\'' +
                 ", intervention='" + intervention + '\'' +
