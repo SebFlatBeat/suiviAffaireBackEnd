@@ -1,5 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.controller;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.BlocageResponse;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
@@ -37,7 +38,7 @@ public class SuiviAffaireController {
 
     @GetMapping("analyse")
     public Page<BlocageResponse> blocagePagined(@RequestParam(name = "page", defaultValue = "0") int page,
-                                                @RequestParam(name = "size", defaultValue = "3") int size) {
+                                                @RequestParam(name = "size", defaultValue = "5") int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         Page<Blocage> pageResult = blocageService.findAllPageable(pageRequest);
         List<BlocageResponse> blocageResponses = pageResult
@@ -47,9 +48,24 @@ public class SuiviAffaireController {
         return new PageImpl<>(blocageResponses, pageRequest, pageResult.getTotalElements());
     }
 
-    @PostMapping("filter")
-    public Page<BlocageResponse> filter(@RequestBody FilterForm filterForm, @RequestParam(name = "page", defaultValue = "0") int page,
-                                @RequestParam(name = "size", defaultValue = "3") int size) {
+    @GetMapping("filter")
+    public Page<BlocageResponse> filter(@RequestParam("numeroAffaire")
+                                                String numeroAffaire,
+                                        @RequestParam("prm")
+                                                String prm,
+                                        @RequestParam("idc")
+                                                String idc,
+                                        @RequestParam("portefeuille")
+                                                String portefeuille,
+                                        @RequestParam("etatContractuel")
+                                                String etatContractuel,
+                                        @RequestParam("etatAffaire")
+                                                String etatAffaire,
+                                        @RequestParam("blocageSource")
+                                                String blocageSource,
+                                        @RequestParam(name = "page", defaultValue = "0") int page,
+                                        @RequestParam(name = "size", defaultValue = "5") int size) {
+        FilterForm filterForm = new FilterForm(numeroAffaire,prm ,idc ,portefeuille, etatContractuel, etatAffaire, blocageSource);
         PageRequest pageRequest = PageRequest.of(page, size);
         Page<Blocage> pageResult = blocageService.filter(filterForm, pageRequest);
         List<BlocageResponse> blocageResponses = pageResult

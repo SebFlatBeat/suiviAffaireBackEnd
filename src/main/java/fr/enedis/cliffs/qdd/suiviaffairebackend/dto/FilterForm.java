@@ -30,8 +30,12 @@ public class FilterForm {
                       String portefeuille, String etatContractuel,
                       String etatAffaire, String blocageSource) {
         this.numeroAffaire = numeroAffaire;
-        this.prm = Long.parseLong(prm);
-        this.idc = Long.parseLong(idc);
+        if (!prm.isEmpty()) {
+            this.prm = Long.parseLong(prm);
+        }
+        if (!idc.isEmpty()) {
+            this.idc = Long.parseLong(idc);
+        }
         this.portefeuille = portefeuille;
         this.etatContractuel = etatContractuel;
         this.etatAffaire = etatAffaire;
