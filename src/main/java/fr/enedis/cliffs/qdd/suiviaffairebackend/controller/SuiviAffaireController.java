@@ -1,6 +1,5 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.controller;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.BlocageResponse;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
