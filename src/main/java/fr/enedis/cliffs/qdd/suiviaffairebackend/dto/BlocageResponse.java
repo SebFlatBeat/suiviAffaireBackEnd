@@ -6,11 +6,11 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 
-@JsonPropertyOrder({"Id", "userApp", "sge", "blocageSource"})
+@JsonPropertyOrder({"id", "userApp", "sge", "blocageSource"})
 public class BlocageResponse {
 
-    @JsonProperty("Id")
-    private Long Id;
+    @JsonProperty("id")
+    private Long id;
     @JsonProperty("userApp")
     private UserApp userApp;
     @JsonProperty("sge")
@@ -24,27 +24,27 @@ public class BlocageResponse {
 
     public BlocageResponse(Blocage blocage){
         super();
-        this.Id = blocage.getId();
+        this.id = blocage.getId();
         this.userApp = blocage.getUserApp();
         this.sge = blocage.getSge();
         this.blocageSource = blocage.getBlocageSource();
     }
 
-    public BlocageResponse(Long Id, UserApp userApp, SGE sge, BlocageSource blocageSource) {
-        this.Id = Id;
+    public BlocageResponse(Long id, UserApp userApp, SGE sge, BlocageSource blocageSource) {
+        this.id = id;
         this.userApp = userApp;
         this.sge = sge;
         this.blocageSource = blocageSource;
     }
 
-    @JsonProperty("Id")
+    @JsonProperty("id")
     public Long getId() {
-        return Id;
+        return id;
     }
 
-    @JsonProperty("Id")
-    public void setId(Long Id) {
-        this.Id = Id;
+    @JsonProperty("id")
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @JsonProperty("userApp")
@@ -80,7 +80,7 @@ public class BlocageResponse {
     @Override
     public String toString() {
         return "BlocageResponse{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", userApp=" + userApp +
                 ", sge=" + sge +
                 ", blocageSource=" + blocageSource +
