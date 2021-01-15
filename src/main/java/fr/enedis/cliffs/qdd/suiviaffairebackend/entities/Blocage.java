@@ -10,7 +10,7 @@ public class Blocage {
 
     @Id
     @GeneratedValue
-    private Long Id;
+    private Long id;
 
     @OneToOne
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
@@ -21,25 +21,26 @@ public class Blocage {
     @Cascade(org.hibernate.annotations.CascadeType.DETACH)
     private SGE sge;
 
+
     @Enumerated(EnumType.STRING)
     private BlocageSource blocageSource;
 
     public Blocage() {
     }
 
-    public Blocage(Long id, UserApp userApp, SGE sge, BlocageSource blocageSource) {
-        Id = id;
+    public Blocage(Long id, @Null UserApp userApp, SGE sge, BlocageSource blocageSource) {
+        this.id = id;
         this.userApp = userApp;
         this.sge = sge;
         this.blocageSource = blocageSource;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public UserApp getUserApp() {
@@ -64,5 +65,15 @@ public class Blocage {
 
     public void setBlocageSource(BlocageSource blocageSource) {
         this.blocageSource = blocageSource;
+    }
+
+    @Override
+    public String toString() {
+        return "Blocage{" +
+                "id=" + id +
+                ", userApp=" + userApp +
+                ", sge=" + sge +
+                ", blocageSource=" + blocageSource +
+                '}';
     }
 }

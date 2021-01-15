@@ -1,8 +1,8 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.entities;
 
 public enum BlocageSource {
-    nonTraite,
+    NONTRAITE,
     SGE,
-    SGO,
+    COSY,
     GEC
 }

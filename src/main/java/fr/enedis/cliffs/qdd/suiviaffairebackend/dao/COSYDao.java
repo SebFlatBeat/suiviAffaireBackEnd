@@ -1,17 +1,17 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.dao;
 
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGO;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.COSY;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface SGODao extends JpaRepository<SGO, Long> {
+public interface COSYDao extends JpaRepository<COSY, Long> {
 
-    SGO save(SGO sgo);
+    COSY save(COSY cosy);
 
-    List<SGO>findAll();
+    List<COSY>findAll();
 
-    Page<SGO>findAll(Pageable pageable);
+    Page<COSY>findAll(Pageable pageable);
 }

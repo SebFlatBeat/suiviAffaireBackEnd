@@ -12,7 +12,7 @@ public class DataSourceConfig {
 
     @Bean
     public DataSource getDataSource() {
-        DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
+        DataSourceBuilder <?> dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.hibernate.dialect.PostgreSQLDialect");
         dataSourceBuilder.url("jdbc:postgresql://localhost:5432/suiviAffaire");
         dataSourceBuilder.username("userSuiviAffaireApp");

@@ -1,14 +1,14 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.dto;
 
+import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.COSY;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.GEC;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGE;
-import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.SGO;
 
 import java.util.List;
 
 public class AllDataListDto  {
     private List <SGE> sge;
-    private List <SGO> sgo;
+    private List <COSY> cosy;
     private List <GEC> gec;
 
     public List<SGE> getSge() {
@@ -19,12 +19,12 @@ public class AllDataListDto  {
         this.sge = sge;
     }
 
-    public List<SGO> getSgo() {
-        return sgo;
+    public List<COSY> getCosy() {
+        return cosy;
     }
 
-    public void setSgo(List<SGO> sgo) {
-        this.sgo = sgo;
+    public void setCosy(List<COSY> cosy) {
+        this.cosy = cosy;
     }
 
     public List<GEC> getGec() {

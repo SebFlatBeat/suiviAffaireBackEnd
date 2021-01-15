@@ -1,6 +1,7 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.BlocageDao;
+import fr.enedis.cliffs.qdd.suiviaffairebackend.dto.FilterForm;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.Blocage;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.BlocageSource;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
@@ -49,14 +50,14 @@ public class BlocageService {
                 case "SGE":
                     blocage.get().setBlocageSource(BlocageSource.SGE);
                     break;
-                case "SGO":
-                    blocage.get().setBlocageSource(BlocageSource.SGO);
+                case "COSY":
+                    blocage.get().setBlocageSource(BlocageSource.COSY);
                     break;
                 case "GEC":
                     blocage.get().setBlocageSource(BlocageSource.GEC);
                     break;
                 default:
-                    blocage.get().setBlocageSource(BlocageSource.nonTraite);
+                    blocage.get().setBlocageSource(BlocageSource.NONTRAITE);
                     break;
             }
             user.ifPresent(app -> blocage.get().setUserApp(app));
@@ -64,16 +65,28 @@ public class BlocageService {
         }
     }
 
+    public Page<Blocage> filter(FilterForm filterForm, Pageable pageable) {
+        return blocageDao.findByfilter(filterForm.getNumeroAffaire(),
+                filterForm.getPrm(),
+                filterForm.getIdc(),
+                filterForm.getPortefeuille(),
+                filterForm.getEtatContractuel(),
+                filterForm.getEtatAffaire(),
+                filterForm.getBlocageSource(),
+                pageable
+        );
+    }
+
     public int[] percent() {
         List<Blocage> blocageList = blocageDao.findAll();
         int nonTraite = 0;
         int sge = 0;
-        int sgo = 0;
+        int cosy = 0;
         int gec = 0;
         int total = 0;
         for (Blocage b : blocageList) {
             switch (b.getBlocageSource()) {
-                case nonTraite:
+                case NONTRAITE:
                     nonTraite++;
                     total++;
                     break;
@@ -81,8 +94,8 @@ public class BlocageService {
                     sge++;
                     total++;
                     break;
-                case SGO:
-                    sgo++;
+                case COSY:
+                    cosy++;
                     total++;
                     break;
                 case GEC:
@@ -93,9 +106,9 @@ public class BlocageService {
         }
         int percentageNonTraite = percentageCalculator.caculPercentage(nonTraite, total);
         int percentageSge = percentageCalculator.caculPercentage(sge, total);
-        int percentageSgo = percentageCalculator.caculPercentage(sgo, total);
+        int percentageCosy = percentageCalculator.caculPercentage(cosy, total);
         int percentageGec = percentageCalculator.caculPercentage(gec, total);
 
-        return new int[]{percentageNonTraite, percentageSge, percentageSgo, percentageGec};
+        return new int[]{percentageNonTraite, percentageSge, percentageCosy, percentageGec};
     }
 }
