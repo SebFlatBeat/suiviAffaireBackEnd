@@ -22,7 +22,7 @@ public class BCryptEncoderConfig {
 
     @Bean(name = "passwordEncoder")
     public static PasswordEncoder passwordencoder(){
-        LOG.info("Encryption OK");
+        LOG.trace("Encryption OK");
         return new BCryptPasswordEncoder();
     }
 

@@ -16,13 +16,13 @@ public class DataSourceConfig {
 
     @Bean
     public DataSource getDataSource() {
-        LOG.info("Build DataSourceConfig");
+        LOG.trace("Build DataSourceConfig");
         DataSourceBuilder <?> dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("org.hibernate.dialect.PostgreSQLDialect");
         dataSourceBuilder.url("jdbc:postgresql://localhost:5432/suiviAffaire");
         dataSourceBuilder.username("userSuiviAffaireApp");
         dataSourceBuilder.password("Sebda2812/1");
-        LOG.info("DataSourceConfig OK");
+        LOG.trace("DataSourceConfig OK");
         return dataSourceBuilder.build();
     }
 }

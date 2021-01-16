@@ -35,7 +35,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder);
-        LOG.info("User authentification");
     }
 
     @Bean
@@ -43,11 +42,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder);
         provider.setUserDetailsService(userDetailsService);
+        LOG.trace("User authentification");
         return provider;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        LOG.debug("Configuration HttpSecurity");
         http.csrf().disable();
         http.httpBasic()
                 .and()
@@ -63,5 +64,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl(INDEX)
                 .invalidateHttpSession(true).deleteCookies("JSESSIONID");
+        LOG.trace("HttpSecurity configuration OK");
     }
 }

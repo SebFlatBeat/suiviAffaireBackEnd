@@ -23,14 +23,14 @@ public class Data {
     private static final Logger LOG = LoggerFactory.getLogger(Data.class);
 
     public void parsing() {
-        LOG.info("Start parsing data");
+        LOG.debug("Start parsing data");
         try {
             reader.readFileGEC(inputGECFile);
             reader.readFileCOSY(inputCOSYFile);
             reader.readFileSGE(inputSGEFile);
             LOG.info("Parsing data is done");
         } catch (Exception e) {
-            LOG.error("An error occured while parsing data : ", e);
+            LOG.error(e.getMessage());
             e.printStackTrace();
         }
     }

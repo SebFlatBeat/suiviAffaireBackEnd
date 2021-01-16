@@ -33,7 +33,7 @@ public class Reader {
     private static final Logger LOG = LoggerFactory.getLogger(Reader.class);
 
     public void readFileGEC(String csvFile) {
-        LOG.info("Start read GEC File");
+        LOG.debug("Start read GEC File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -58,13 +58,13 @@ public class Reader {
             scanner.close();
             LOG.info("Done to read GEC File");
         } catch (FileNotFoundException e) {
-            LOG.error("An error occured while reading GEC File : ", e);
             e.printStackTrace();
+            LOG.error(e.getMessage());
         }
     }
 
     public void readFileCOSY(String csvFile) {
-        LOG.info("Start read COSY File");
+        LOG.debug("Start read COSY File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -82,12 +82,12 @@ public class Reader {
             LOG.info("Done to read COSY File");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            LOG.error("An error occured while reading GEC File : ", e);
+            LOG.error(e.getMessage());
         }
     }
 
     public void readFileSGE(String csvFile) {
-        LOG.info("Start read SGE File");
+        LOG.debug("Start read SGE File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -127,7 +127,7 @@ public class Reader {
             LOG.info("Done to read SGE File");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            LOG.error("An error occured while reading GEC File : ", e);
+            LOG.error(e.getMessage());
         }
     }
 }
