@@ -111,7 +111,6 @@ public class FilterForm {
         } else {
             return null;
         }
-
     }
 
     public void setBlocageSource(String blocageSource) {

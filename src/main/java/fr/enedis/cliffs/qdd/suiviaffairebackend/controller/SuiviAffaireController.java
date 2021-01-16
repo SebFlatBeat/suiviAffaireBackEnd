@@ -86,7 +86,8 @@ public class SuiviAffaireController {
 
     @PostMapping("register")
     public void newUser(@RequestParam String username,
-                        @RequestParam String password, @RequestParam String email)
+                        @RequestParam String password,
+                        @RequestParam String email)
             throws UserExistException, NotNniException {
         userAppService.saveNewUser(username, password, email);
     }
