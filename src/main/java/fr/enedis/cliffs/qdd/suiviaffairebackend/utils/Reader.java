@@ -5,6 +5,8 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.GECService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.SGEService;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.COSYService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +30,10 @@ public class Reader {
     @Autowired
     BlocageService blocageService;
 
+    private static final Logger LOG = LoggerFactory.getLogger(Reader.class);
+
     public void readFileGEC(String csvFile) {
+        LOG.debug("Start read GEC File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -51,12 +56,15 @@ public class Reader {
                 gecService.saveGEC(gec);
             }
             scanner.close();
+            LOG.info("Done to read GEC File");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            LOG.error(e.getMessage());
         }
     }
 
     public void readFileCOSY(String csvFile) {
+        LOG.debug("Start read COSY File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -71,12 +79,15 @@ public class Reader {
                 cosyService.saveCOSY(cosy);
             }
             scanner.close();
+            LOG.info("Done to read COSY File");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            LOG.error(e.getMessage());
         }
     }
 
     public void readFileSGE(String csvFile) {
+        LOG.debug("Start read SGE File");
         try {
             Scanner scanner = new Scanner(new FileReader(csvFile));
             String line;
@@ -113,8 +124,10 @@ public class Reader {
                 blocageService.saveBlocage(blocage);
             }
             scanner.close();
+            LOG.info("Done to read SGE File");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            LOG.error(e.getMessage());
         }
     }
 }

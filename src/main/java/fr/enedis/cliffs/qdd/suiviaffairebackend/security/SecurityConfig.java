@@ -1,6 +1,8 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.security;
 
 import fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,6 +22,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    private static final Logger LOG = LoggerFactory.getLogger(SecurityConfig.class);
+
     private static final String INDEX = "/index";
 
     @Bean
@@ -29,8 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws
-            Exception {
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder);
     }
 
@@ -39,15 +42,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(passwordEncoder);
         provider.setUserDetailsService(userDetailsService);
+        LOG.trace("User authentification");
         return provider;
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        LOG.debug("Configuration HttpSecurity");
         http.csrf().disable();
         http.httpBasic()
                 .and()
-                .authorizeRequests().antMatchers("/", INDEX, "/register", "/user", "/analyse", "/filter", "/synthese", "/blocage","/getFiles").permitAll()
+                .authorizeRequests().antMatchers("/", INDEX, "/register", "/user", "/analyse", "/filter", "/synthese", "/blocage", "/getFiles").permitAll()
                 .antMatchers("/**").authenticated()
                 .and()
                 .formLogin()
@@ -59,6 +64,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl(INDEX)
                 .invalidateHttpSession(true).deleteCookies("JSESSIONID");
-
+        LOG.trace("HttpSecurity configuration OK");
     }
 }
