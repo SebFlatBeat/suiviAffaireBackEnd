@@ -1,0 +1,3472 @@
+2021-01-17 09:17:12,146 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting SuiviAffaireBackendApplication using Java 1.8.0_261 on LAPTOP-8DNVT5CQ with PID 19276 (C:\Users\sebas\IdeaProjects\suiviAffaireBackEnd\target\classes started by sebas in C:\Users\sebas\IdeaProjects\suiviAffaireBackEnd)
+2021-01-17 09:17:12,164 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2021-01-17 09:17:12,375 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-17 09:17:12,376 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-17 09:17:15,125 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-17 09:17:15,132 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-01-17 09:17:15,255 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface fr.enedis.cliffs.qdd.suiviaffairebackend.dao.BlocageDao. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-01-17 09:17:15,261 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface fr.enedis.cliffs.qdd.suiviaffairebackend.dao.COSYDao. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-01-17 09:17:15,273 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface fr.enedis.cliffs.qdd.suiviaffairebackend.dao.GECDao. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-01-17 09:17:15,284 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface fr.enedis.cliffs.qdd.suiviaffairebackend.dao.SGEDao. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-01-17 09:17:15,305 INFO org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport [restartedMain] Spring Data JDBC - Could not safely identify store assignment for repository candidate interface fr.enedis.cliffs.qdd.suiviaffairebackend.dao.UserAppDao. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-01-17 09:17:15,308 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 164 ms. Found 0 JDBC repository interfaces.
+2021-01-17 09:17:15,335 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-17 09:17:15,335 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-17 09:17:15,507 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 141 ms. Found 5 JPA repository interfaces.
+2021-01-17 09:17:17,073 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,079 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.support.PluginRegistryFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,096 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'relProviderPluginRegistry' of type [org.springframework.plugin.core.OrderAwarePluginRegistry] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,102 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean '_relProvider' of type [org.springframework.hateoas.server.core.DelegatingLinkRelationProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,113 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'messageResolver' of type [org.springframework.hateoas.mediatype.MessageSourceResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,114 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.data.web.config.SpringDataJacksonConfiguration' of type [org.springframework.data.web.config.SpringDataJacksonConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,127 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jacksonGeoModule' of type [org.springframework.data.geo.GeoModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,145 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestMvcAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,145 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,145 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,185 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties' of type [org.springframework.boot.autoconfigure.jackson.JacksonProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,186 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'standardJacksonObjectMapperBuilderCustomizer' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration$StandardJackson2ObjectMapperBuilderCustomizer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,198 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,200 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'parameterNamesModule' of type [com.fasterxml.jackson.module.paramnames.ParameterNamesModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,204 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,216 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jsonComponentModule' of type [org.springframework.boot.jackson.JsonComponentModule] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,216 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,225 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'spring.data.rest-org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties' of type [org.springframework.boot.autoconfigure.data.rest.RepositoryRestProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,232 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'springBootRepositoryRestConfigurer' of type [org.springframework.boot.autoconfigure.data.rest.SpringBootRepositoryRestConfigurer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,233 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'configurerDelegate' of type [org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerDelegate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,238 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,255 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'stringHttpMessageConverter' of type [org.springframework.http.converter.StringHttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,257 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration' of type [org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,259 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration' of type [org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,275 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jacksonObjectMapperBuilder' of type [org.springframework.http.converter.json.Jackson2ObjectMapperBuilder] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,326 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jacksonObjectMapper' of type [com.fasterxml.jackson.databind.ObjectMapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,332 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'mappingJackson2HttpMessageConverter' of type [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:17,332 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration' of type [org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-17 09:17:18,070 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8090 (http)
+2021-01-17 09:17:18,101 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8090"]
+2021-01-17 09:17:18,102 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2021-01-17 09:17:18,102 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-01-17 09:17:18,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2021-01-17 09:17:18,446 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6069 ms
+2021-01-17 09:17:18,775 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-01-17 09:17:18,998 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-17 09:17:19,103 INFO org.hibernate.jpa.internal.util.LogHelper [task-1] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-17 09:17:19,239 INFO org.hibernate.Version [task-1] HHH000412: Hibernate ORM core version 5.4.23.Final
+2021-01-17 09:17:19,451 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-17 09:17:19,613 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [task-1] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-17 09:17:19,777 INFO com.zaxxer.hikari.HikariDataSource [task-1] HikariPool-1 - Starting...
+2021-01-17 09:17:19,789 WARN com.zaxxer.hikari.util.DriverDataSource [task-1] Registered driver with driverClassName=org.hibernate.dialect.PostgreSQLDialect was not found, trying direct instantiation.
+2021-01-17 09:17:19,790 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-01-17 09:17:19,795 WARN com.zaxxer.hikari.util.DriverDataSource [task-1] Failed to create instance of driver class org.hibernate.dialect.PostgreSQLDialect, trying jdbcUrl resolution
+java.lang.ClassCastException: org.hibernate.dialect.PostgreSQLDialect cannot be cast to java.sql.Driver
+	at com.zaxxer.hikari.util.DriverDataSource.<init>(DriverDataSource.java:95)
+	at com.zaxxer.hikari.pool.PoolBase.initializeDataSource(PoolBase.java:325)
+	at com.zaxxer.hikari.pool.PoolBase.<init>(PoolBase.java:114)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:108)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:176)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:118)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1224)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1255)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2021-01-17 09:17:20,310 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14b88fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@d11574, org.springframework.security.web.header.HeaderWriterFilter@15c7e90, org.springframework.security.web.authentication.logout.LogoutFilter@ef51f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1578788, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f39de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f2fc9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2581b6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@151965a, org.springframework.security.web.session.SessionManagementFilter@125fcb3, org.springframework.security.web.access.ExceptionTranslationFilter@7db1c2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2fdbc9]
+2021-01-17 09:17:20,318 WARN org.springframework.security.config.annotation.web.builders.WebSecurity [restartedMain] 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2021-01-17 09:17:20,671 INFO com.zaxxer.hikari.HikariDataSource [task-1] HikariPool-1 - Start completed.
+2021-01-17 09:17:20,678 INFO org.hibernate.dialect.Dialect [task-1] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-01-17 09:17:22,085 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [task-1] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-17 09:17:22,100 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [task-1] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-17 09:17:23,630 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [task-2] LiveReload server is running on port 35729
+2021-01-17 09:17:24,520 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8090"]
+2021-01-17 09:17:24,612 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8090 (http) with context path ''
+2021-01-17 09:17:24,612 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Triggering deferred initialization of Spring Data repositories…
+2021-01-17 09:17:25,350 INFO org.springframework.data.repository.config.DeferredRepositoryInitializationListener [restartedMain] Spring Data repositories initialized!
+2021-01-17 09:17:25,367 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started SuiviAffaireBackendApplication in 15.152 seconds (JVM running for 18.028)
+2021-01-17 09:17:25,375 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.SuiviAffaireBackendApplication [restartedMain] Démarrage de l application
+2021-01-17 09:17:43,586 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8090-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-17 09:17:43,586 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-01-17 09:17:43,586 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8090-exec-1] Completed initialization in 0 ms
+2021-01-17 09:17:43,607 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@1afed9f
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:17:43,728 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Authentification d'un utilisateur
+2021-01-17 09:17:44,043 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-1] Utilisateur Authentifié
+2021-01-17 09:17:44,229 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:17:44,232 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Authentification d'un utilisateur
+2021-01-17 09:17:44,463 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-3] Utilisateur Authentifié
+2021-01-17 09:17:44,509 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:17:44,520 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:18:10,318 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/synthese':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/synthese
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/synthese
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:18:10,322 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Création du pourcentage
+2021-01-17 09:18:10,579 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService [http-nio-8090-exec-5] Renvoi sous un tableau l'ensemble des résultats
+2021-01-17 09:18:11,559 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:18:11,566 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:20:11,362 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:11,363 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Authentification d'un utilisateur
+2021-01-17 09:20:11,638 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-8] Utilisateur Authentifié
+2021-01-17 09:20:11,648 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:11,651 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 09:20:11,879 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 09:20:12,017 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:12,024 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:20:43,814 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:43,816 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Authentification d'un utilisateur
+2021-01-17 09:20:44,044 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-1] Utilisateur Authentifié
+2021-01-17 09:20:44,050 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:44,053 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Authentification d'un utilisateur
+2021-01-17 09:20:44,280 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-3] Utilisateur Authentifié
+2021-01-17 09:20:44,370 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:20:44,370 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:21:15,779 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:21:15,780 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 09:21:16,026 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Utilisateur Authentifié
+2021-01-17 09:21:16,042 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:21:16,047 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Authentification d'un utilisateur
+2021-01-17 09:21:16,302 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-4] Utilisateur Authentifié
+2021-01-17 09:21:16,437 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:21:16,443 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:22:33,194 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:22:33,195 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Authentification d'un utilisateur
+2021-01-17 09:22:33,420 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-8] Utilisateur Authentifié
+2021-01-17 09:22:33,430 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:22:33,435 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 09:22:33,694 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 09:22:33,843 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:22:33,851 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:24:01,795 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:24:01,799 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Authentification d'un utilisateur
+2021-01-17 09:24:01,979 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-3] Utilisateur Authentifié
+2021-01-17 09:24:01,997 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:24:02,000 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 09:24:02,201 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Utilisateur Authentifié
+2021-01-17 09:24:02,320 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 09:24:02,325 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 09:35:35,299 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m14s439ms358µs400ns).
+2021-01-17 10:02:57,165 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:02:57,170 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Authentification d'un utilisateur
+2021-01-17 10:02:57,368 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-6] Utilisateur Authentifié
+2021-01-17 10:02:57,374 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:02:57,379 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-7] Authentification d'un utilisateur
+2021-01-17 10:02:57,582 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-7] Utilisateur Authentifié
+2021-01-17 10:02:57,713 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:02:57,718 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:03:33,516 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:03:33,520 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 10:03:33,740 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 10:03:33,752 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:03:33,756 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:03:33,954 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:03:34,090 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:03:34,095 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:04:12,746 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:04:12,750 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Authentification d'un utilisateur
+2021-01-17 10:04:12,952 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-3] Utilisateur Authentifié
+2021-01-17 10:04:12,965 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:04:12,970 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 10:04:13,168 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Utilisateur Authentifié
+2021-01-17 10:04:13,292 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:04:13,298 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:06:16,894 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:06:16,898 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Authentification d'un utilisateur
+2021-01-17 10:06:17,092 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-6] Utilisateur Authentifié
+2021-01-17 10:06:17,101 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:06:17,102 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-7] Authentification d'un utilisateur
+2021-01-17 10:06:17,303 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-7] Utilisateur Authentifié
+2021-01-17 10:06:17,409 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:06:17,418 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:07:43,379 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:07:43,381 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:07:43,611 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:07:43,619 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:07:43,624 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Authentification d'un utilisateur
+2021-01-17 10:07:43,843 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-1] Utilisateur Authentifié
+2021-01-17 10:07:43,967 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:07:43,972 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:08:36,079 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:08:36,083 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 10:08:36,334 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Utilisateur Authentifié
+2021-01-17 10:08:36,341 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:08:36,345 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 10:08:36,552 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Utilisateur Authentifié
+2021-01-17 10:08:36,672 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:08:36,675 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:09:29,389 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:29,390 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Authentification d'un utilisateur
+2021-01-17 10:09:29,604 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-6] Utilisateur Authentifié
+2021-01-17 10:09:29,621 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:29,624 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-7] Authentification d'un utilisateur
+2021-01-17 10:09:29,819 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-7] Utilisateur Authentifié
+2021-01-17 10:09:29,921 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:29,926 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:09:58,989 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:58,991 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 10:09:59,203 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 10:09:59,222 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:59,224 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:09:59,420 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:09:59,549 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:09:59,557 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:11:00,363 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:00,366 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 10:11:00,559 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Utilisateur Authentifié
+2021-01-17 10:11:00,564 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:00,568 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 10:11:00,769 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Utilisateur Authentifié
+2021-01-17 10:11:00,920 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:00,927 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:11:31,003 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:31,006 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Authentification d'un utilisateur
+2021-01-17 10:11:31,217 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-6] Utilisateur Authentifié
+2021-01-17 10:11:31,226 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:31,229 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-7] Authentification d'un utilisateur
+2021-01-17 10:11:31,438 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-7] Utilisateur Authentifié
+2021-01-17 10:11:31,575 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:11:31,579 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:12:08,599 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:12:08,602 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 10:12:08,842 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 10:12:08,857 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:12:08,860 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:12:09,079 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:12:09,215 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:12:09,220 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:13:20,257 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=Sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:20,258 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 10:13:20,456 WARN fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Mot de passe incorrect
+2021-01-17 10:13:20,485 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-2] Resolved [fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.WrongPasswordException: Mot de passe incorrect]
+2021-01-17 10:13:20,500 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/error?userApp=I56852&password=Sebastien':
+
+org.apache.catalina.core.ApplicationHttpRequest@1abe59f
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:20,566 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=Sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:20,570 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 10:13:20,778 WARN fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Mot de passe incorrect
+2021-01-17 10:13:20,783 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8090-exec-5] Resolved [fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.WrongPasswordException: Mot de passe incorrect]
+2021-01-17 10:13:20,785 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/error?userApp=I56852&password=Sebastien':
+
+org.apache.catalina.core.ApplicationHttpRequest@1a824a7
+
+servletPath:/error
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:24,576 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:24,579 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Authentification d'un utilisateur
+2021-01-17 10:13:24,813 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-4] Utilisateur Authentifié
+2021-01-17 10:13:24,829 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:24,831 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Authentification d'un utilisateur
+2021-01-17 10:13:25,103 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-6] Utilisateur Authentifié
+2021-01-17 10:13:25,301 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:13:25,305 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-7] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:14:46,970 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:14:46,974 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:14:47,192 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:14:47,205 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:14:47,208 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Authentification d'un utilisateur
+2021-01-17 10:14:47,399 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-1] Utilisateur Authentifié
+2021-01-17 10:14:47,541 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:14:47,547 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:20:45,684 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:20:45,687 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 10:20:45,926 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Utilisateur Authentifié
+2021-01-17 10:20:45,934 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:20:45,936 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Authentification d'un utilisateur
+2021-01-17 10:20:46,138 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-4] Utilisateur Authentifié
+2021-01-17 10:20:51,314 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-6] 
+
+************************************************************
+
+Request received for GET '/synthese':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/synthese
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/synthese
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:20:51,318 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-6] Création du pourcentage
+2021-01-17 10:20:51,540 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.BlocageService [http-nio-8090-exec-6] Renvoi sous un tableau l'ensemble des résultats
+2021-01-17 10:20:54,606 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-7] 
+
+************************************************************
+
+Request received for OPTIONS '/logout':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/logout
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: */*
+access-control-request-method: POST
+access-control-request-headers: content-type
+origin: http://localhost:4200
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+sec-fetch-mode: cors
+sec-fetch-site: same-site
+sec-fetch-dest: empty
+referer: http://localhost:4200/synthese
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:12,128 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-8] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:12,130 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-8] Authentification d'un utilisateur
+2021-01-17 10:21:12,335 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-8] Utilisateur Authentifié
+2021-01-17 10:21:12,341 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-9] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:12,345 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-9] Authentification d'un utilisateur
+2021-01-17 10:21:12,576 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-9] Utilisateur Authentifié
+2021-01-17 10:21:48,229 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-10] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:48,230 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-10] Authentification d'un utilisateur
+2021-01-17 10:21:48,421 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-10] Utilisateur Authentifié
+2021-01-17 10:21:48,428 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-1] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:48,431 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-1] Authentification d'un utilisateur
+2021-01-17 10:21:48,618 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-1] Utilisateur Authentifié
+2021-01-17 10:21:48,735 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-3] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:21:48,739 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-3] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:22:44,693 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-2] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:22:44,696 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-2] Authentification d'un utilisateur
+2021-01-17 10:22:44,902 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-2] Utilisateur Authentifié
+2021-01-17 10:22:44,914 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-5] 
+
+************************************************************
+
+Request received for GET '/user?userApp=I56852&password=sebastien':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/user
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/login
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:22:44,915 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-5] Authentification d'un utilisateur
+2021-01-17 10:22:45,116 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.service.UserAppService [http-nio-8090-exec-5] Utilisateur Authentifié
+2021-01-17 10:22:45,247 INFO org.springframework.security.web.debug.Logger [http-nio-8090-exec-4] 
+
+************************************************************
+
+Request received for GET '/filter?numeroAffaire=&prm=&idc=&portefeuille=&etatAffaire=&etatContractuel=&blocageSource=&page=0&size=5':
+
+org.apache.catalina.connector.RequestFacade@faa978
+
+servletPath:/filter
+pathInfo:null
+headers: 
+host: localhost:8090
+connection: keep-alive
+accept: application/json, text/plain, */*
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36 OPR/73.0.3856.329
+origin: http://localhost:4200
+sec-fetch-site: same-site
+sec-fetch-mode: cors
+sec-fetch-dest: empty
+referer: http://localhost:4200/analyse
+accept-encoding: gzip, deflate, br
+accept-language: fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  BasicAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2021-01-17 10:22:45,253 INFO fr.enedis.cliffs.qdd.suiviaffairebackend.controller.SuiviAffaireController [http-nio-8090-exec-4] Création d'une page paginée de Blocage avec ou sans filtre
+2021-01-17 10:33:06,178 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m30s124ms607µs800ns).
+2021-01-17 11:55:22,741 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m16s113ms835µs800ns).
+2021-01-17 12:34:35,875 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=24m12s940ms487µs700ns).
+2021-01-17 14:48:46,083 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h58m40s67ms546µs).
+2021-01-17 15:11:04,461 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m48s26ms971µs600ns).
+2021-01-17 15:40:15,762 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m11s23ms703µs400ns).
+2021-01-17 18:23:00,908 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h27m45s5ms319µs900ns).
+2021-01-17 21:38:31,167 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h30s25ms597µs).
