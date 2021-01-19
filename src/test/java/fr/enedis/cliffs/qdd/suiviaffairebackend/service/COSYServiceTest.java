@@ -12,7 +12,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class COSYServiceTest {
 
@@ -31,7 +30,6 @@ class COSYServiceTest {
 
         Mockito.when(cosyServiceUnderTest.cosyDao.findAll()).thenReturn(cosyTest);
     }
-
 
     @Test
     void testFindAll() {
