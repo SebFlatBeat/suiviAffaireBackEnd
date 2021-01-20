@@ -61,6 +61,7 @@ class UserAppServiceTest {
     void testFindByUsernameAndPassword() throws Exception {
         // Configure UserAppDao.findByUsername(...).
         final Optional<UserApp> userApp = Optional.of(new UserApp(0L, "username", "password", "email"));
+        userApp.get().setPassword("password");
         when(mockUserAppDao.findByUsername("username")).thenReturn(userApp);
 
         // Run the test
@@ -78,6 +79,7 @@ class UserAppServiceTest {
         // Configure UserAppDao.findByUsername(...).
         final Optional<UserApp> userApp = Optional.of(new UserApp(0L, "username", "password", "email"));
         when(mockUserAppDao.findByUsername("username")).thenReturn(userApp);
+
 
         // Run the test
         assertThatThrownBy(() -> userAppServiceUnderTest.findByUsernameAndPassword("username", "password")).isInstanceOf(WrongPasswordException.class);
