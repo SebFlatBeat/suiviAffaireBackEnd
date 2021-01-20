@@ -6,6 +6,7 @@ import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.*;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.utils.PercentageCalculator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;

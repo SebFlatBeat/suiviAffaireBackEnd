@@ -1,6 +1,5 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
-import fr.enedis.cliffs.qdd.suiviaffairebackend.configuration.BCryptEncoderConfig;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.UserAppDao;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.exceptions.UserNotFoundException;
@@ -10,10 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,7 +24,6 @@ class UserAppServiceTest {
 
     @InjectMocks
     private UserAppService userAppServiceUnderTest;
-
 
 
     @BeforeEach
@@ -61,7 +56,7 @@ class UserAppServiceTest {
         // Verify the results
         assertEquals(userApp,result);
     }
-    /*
+
       @Test
     void testFindByUsernameAndPassword() throws Exception {
         // Configure UserAppDao.findByUsername(...).
@@ -69,12 +64,12 @@ class UserAppServiceTest {
         when(mockUserAppDao.findByUsername("username")).thenReturn(userApp);
 
         // Run the test
-        final UserApp result = userAppServiceUnderTest.findByUsernameAndPassword("username","password");
+        final UserApp userAppTest = userAppServiceUnderTest.findByUsernameAndPassword("username","password");
 
         // Verify the results
-          assertEquals(userApp,result);
+          assertEquals(userApp.get(),userAppTest);
     }
-     */
+
 
     @Test
     void testFindByUsernameAndPassword_ThrowsWrongPasswordException() {
