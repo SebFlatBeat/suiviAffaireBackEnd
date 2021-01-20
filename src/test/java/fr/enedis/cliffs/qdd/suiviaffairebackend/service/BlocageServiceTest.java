@@ -46,6 +46,7 @@ class BlocageServiceTest {
         final Page<Blocage> result = blocageServiceUnderTest.findAllPageable(PageRequest.of(0, 1));
 
         // Verify the results
+        assertEquals(blocages,result);
     }
 
     @Test
@@ -60,6 +61,7 @@ class BlocageServiceTest {
         final Optional<Blocage> result = blocageServiceUnderTest.findById(0L);
 
         // Verify the results
+        assertEquals(blocage, result);
     }
 
 
