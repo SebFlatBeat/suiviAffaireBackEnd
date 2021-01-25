@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "0e5eadf3-89f5-4b49-a940-c903fb626232",
+		"name": "suiviAffaireBackEndIntegrationTest",
+		"description": "Test d'integration de l'application suiviAffaireBackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blocage",
+			"item": [
+				{
+					"name": "updateBlocage",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"updateBlocage\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"    pm.response.to.be.ok;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/blocage?id=400&choix=SGE&username=I56852",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"blocage"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "400"
+								},
+								{
+									"key": "choix",
+									"value": "SGE"
+								},
+								{
+									"key": "username",
+									"value": "I56852"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserApp",
+			"item": [
+				{
+					"name": "newUserNniException",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"newUserNniException\", function(){\r",
+									"    pm.response.to.have.status(422);\r",
+									"    pm.expect.fail;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/register?username=Test&password=test&email=test@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "Test"
+								},
+								{
+									"key": "password",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newUserUserExistException",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"newUserUserExistException\", function(){\r",
+									"    pm.response.to.have.status(422);\r",
+									"    pm.expect.fail;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/register?username=I56852&password=test&email=test@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "I56852"
+								},
+								{
+									"key": "password",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "newUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"newUser\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"    pm.response.to.be.ok;\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/register?username=C00003&password=test&email=test@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"register"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "C00003"
+								},
+								{
+									"key": "password",
+									"value": "test"
+								},
+								{
+									"key": "email",
+									"value": "test@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"loginUser\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"    pm.response.to.be.ok;\r",
+									"    var dataJson = pm.response.json();\r",
+									"    pm.expect(dataJson.username).to.equal('I56852')\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/user?userApp=I56852&password=sebastien",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "userApp",
+									"value": "I56852"
+								},
+								{
+									"key": "password",
+									"value": "sebastien"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
