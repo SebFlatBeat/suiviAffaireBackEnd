@@ -1,5 +1,6 @@
 package fr.enedis.cliffs.qdd.suiviaffairebackend.service;
 
+
 import fr.enedis.cliffs.qdd.suiviaffairebackend.configuration.BCryptEncoderConfig;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.dao.UserAppDao;
 import fr.enedis.cliffs.qdd.suiviaffairebackend.entities.UserApp;
@@ -70,7 +71,7 @@ public class UserAppService implements UserDetailsService {
     }
 
     public void saveNewUser(String username, String password, String email) throws UserExistException, NotNniException {
-       LOG.debug("Début de l'enregistrement d'un utilisateur");
+        LOG.debug("Début de l'enregistrement d'un utilisateur");
         UserApp newUserApp = new UserApp();
         newUserApp.setUsername(username);
         LOG.trace("Vérification du respect de la contrainte");
@@ -90,4 +91,5 @@ public class UserAppService implements UserDetailsService {
         }
     }
 }
+
 
