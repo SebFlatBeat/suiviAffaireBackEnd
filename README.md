@@ -8,7 +8,7 @@ Depuis IntelliJ, importez le projet depuis GitHub
 
 Pour la partie FrontEnd, rendez-vous sur le repo [suiviAffaireFrontEnd](https://github.com/SebFlatBeat/suiviAffaireFrontEnd) et installez-le également
 
-##Tests d'intégration
+## Tests d'intégration
 
 Pour lancer les tests d'intégration en CLI, il faut installer dans le dossier du projet l'outil developpé par Postman appelé Newman.
 
